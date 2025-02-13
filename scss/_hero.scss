@@ -3,97 +3,162 @@
 @import "colors";
 
 .hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
   position: relative;
-  width: 1226.377px;
   height: 944.6px;
-  font-size: $font-size-xxl;
-  top: 159px;
-  left: 128px;
-  padding: $spacing-sm;
+  text-align: left;
+  font-size: 32px;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: Audiowide;
   overflow: hidden;
 
+  // Content wrapper for text elements
+  &__content-wrapper {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 16px;
+    height: 100%;
+  }
+
+  // Video section
+  &__video {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1158.4px;
+    height: 944.6px;
+    z-index: -1;
+
+    video {
+      position: absolute;
+      top: 212px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 923px;
+      height: 478px;
+    }
+
+    // Gradient overlays
+    &-overlay1 {
+      position: absolute;
+      top: 110px;
+      left: 0;
+      background: linear-gradient(-90deg, rgba(0, 0, 0, 0.01), #000 52.5%);
+      width: 506px;
+      height: 602px;
+    }
+
+    &-overlay2 {
+      position: absolute;
+      top: 752.02px;
+      left: 1137.7px;
+      background: linear-gradient(-90deg, rgba(0, 0, 0, 0.01), #000 52.5%);
+      width: 506px;
+      height: 602px;
+      transform: rotate(-178deg);
+      transform-origin: 0 0;
+    }
+
+    &-overlay3 {
+      position: absolute;
+      top: 11.66px;
+      left: 956.89px;
+      background: linear-gradient(-90deg, rgba(0, 0, 0, 0.01), #000 52.5%);
+      width: 506px;
+      height: 714.7px;
+      transform: rotate(90.9deg);
+      transform-origin: 0 0;
+    }
+
+    &-overlay4 {
+      position: absolute;
+      top: 944.6px;
+      left: 285.87px;
+      background: linear-gradient(-90deg, rgba(0, 0, 0, 0.01), #000 52.5%);
+      width: 506px;
+      height: 714.7px;
+      transform: rotate(-93.2deg);
+      transform-origin: 0 0;
+    }
+  }
+
+  &__biohazard {
+    position: absolute;
+    top: 761px;
+    left: 856px;
+    width: 40px;
+    height: 40px;
+    z-index: 1;
+  }
+
   &__welcome {
-    display: inline-block;
-    text-align: left;
-    font-family: $font-primary;
-    font-size: $font-size-xxl;
-    margin-top: 96px;
-    width: 898px;
-    background: $color-gradient;
+    position: absolute;
+    top: 96px;
+    left: 84px;
+    font-size: 58px;
+    line-height: 1.2;
+    background: linear-gradient(
+      90deg,
+      #45b4d6,
+      #163e4a 71%,
+      rgba(93, 81, 68, 0.75)
+    );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
   &__subtext {
+    position: absolute;
+    top: 194px;
+    left: 84px;
+    font-size: 32px;
+    line-height: 1.4;
     display: inline-block;
-    text-align: left;
-    font-size: $font-size-xl;
-    font-family: $font-light;
-    margin-top: $spacing-md;
+    font-family: "Sansation Light", "Sansation", sans-serif;
     font-weight: 300;
-    max-width: 440px;
-    background: $color-gradient;
+    background: linear-gradient(90deg, #45b4d6, #163e4a);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    width: 440px;
   }
 
   &__cta {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    height: 55px;
-    min-width: 281px;
-    top: 63px;
-    left: 59px;
-    border-radius: $border-radius-lg;
-    background: linear-gradient(90deg, rgba(51, 147, 176, 0.34), rgba(18, 20, 21, 0.34));
+    position: absolute;
+    top: 329px;
+    left: 180px;
+    border-radius: 20px;
+    background: linear-gradient(
+      90deg,
+      rgba(51, 147, 176, 0.34),
+      rgba(18, 20, 21, 0.34)
+    );
     border: 2px solid rgba(93, 85, 85, 0.5);
-    padding: $spacing-sm;
-    font-size: $font-size-lg;
-    font-family: $font-secondary;
-    color: $color-text;
+    box-sizing: border-box;
+    width: 281px;
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-size: 24px;
+    font-family: Sansation;
+    color: rgba(255, 255, 255, 0.7);
     cursor: pointer;
-    transition: ease-in-out 0.3s;
+    transition: all 0.3s ease;
 
     &:hover {
-      background: rgba(51, 147, 176, 0.75);
+      background: linear-gradient(
+        90deg,
+        rgba(51, 147, 176, 0.5),
+        rgba(18, 20, 21, 0.5)
+      );
     }
-  }
 
-  &__video {
-    position: absolute;
-    top: 212px;
-    left: 49px;
-    width: 923px;
-    height: 478px;
-    z-index: -1;
-
-    video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    &-text {
+      position: relative;
     }
-  }
-
-  &__overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: $color-overlay;
-  }
-
-  &__biohazard {
-    position: absolute;
-    bottom: $spacing-md;
-    right: $spacing-md;
-    width: 50px;
-    height: 50px;
-    z-index: 4;
   }
 }
