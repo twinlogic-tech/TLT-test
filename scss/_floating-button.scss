@@ -1,0 +1,27 @@
+@import "variables";
+@import "fonts";
+@import "colors";
+
+.floating-button {
+  position: fixed;
+  bottom: $spacing-xl;
+  right: $spacing-xl;
+  background: $color-gradient;
+  border-radius: $border-radius-lg;
+  padding: $spacing-sm $spacing-md;
+  color: $color-text;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  transition: background 0.3s ease;
+
+  &:hover {
+    background: darken($color-primary, 10%);
+  }
+
+  img {
+    width: 16px;
+    height: 16px;
+  }
+}

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="img/Group 11.svg" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Audiowide:wght@400&display=swap" />
+    <!-- <link rel="stylesheet" href="style/normalize.css" /> -->
+    <link rel="stylesheet" href="scss/main.css" />
+    <title>Twin Logic Tech</title>
+  </head>
+  <body>
+    <header class="header">
+      <section class="header__navbar">
+        <div class="header__logo">
+          <img class="header__logo-image" alt="Twin Logic Tech Logo" src="img/Group 11.svg" />
+          <div class="header__logo-text"><p>Twin Logic Tech</p></div>
+        </div>
+        <nav class="header__navigation">
+          <ul>
+            <li class="header__nav-item">ABOUT US</li>
+            <li class="header__nav-item">PROJECTS</li>
+            <li class="header__nav-item">CONTACT</li>
+          </ul>
+        </nav>
+      </section>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero">
+        <p class="hero__welcome">Welcome to Twin Logic Tech</p>
+        <i class="hero__subtext">Innovative Solutions to Drive Your Business Forward.</i>
+        <button class="hero__cta">
+          <b class="hero__cta-text">Learn more</b>
+        </button>
+        <div class="hero__video">
+          <video
+            class="hero__background-video"
+            autoplay
+            loop
+            muted
+            playsinline
+            src="/video/-3016-4895-89a5-b37bf071911b.mp4"
+            type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="hero__overlay"></div>
+          <img class="hero__biohazard" alt="Biohazard Icon" src="img/Biohazard.svg" />
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section class="services">
+        <div class="services__card">
+          <p class="services__card-title">Backend solutions</p>
+          <img class="services__card-icon" alt="Tree structure Icon" src="img/TreeStructure.svg" />
+          <p class="services__card-status">coming soon..</p>
+        </div>
+        <div class="services__card">
+          <p class="services__card-title">Cyber security</p>
+          <p class="services__card-status">coming soon..</p>
+        </div>
+        <div class="services__card">
+          <p class="services__card-title">Front-end development</p>
+          <img class="services__card-icon" alt="Git Diff Icon" src="img/GitDiff.svg" />
+          <p class="services__card-description">
+            Need a sleek, responsive website? Our front-end development
+            services ensure your site looks great and works flawlessly on all
+            devices.
+          </p>
+          <p><b>Let’s build something amazing together!</b></p>
+        </div>
+      </section>
+
+      <!-- What We Do Section -->
+      <section class="what-we-do">
+        <div class="what-we-do__text">
+          <span>What</span>
+          <span class="we-do"> we do</span>
+        </div>
+        <div class="what-we-do__card">
+          <p>
+            Twin Logic Tech was founded by two IT enthusiasts from an IT program
+            in Helsingborg, Sweden, with a clear vision: to create a company
+            that attracts talented collaborators and engages dynamic clients.
+            While our current focus is website development, we aim to expand
+            within the IT industry to offer tailored, comprehensive solutions.
+            Whether for a large corporation or a small startup, our mission is
+            to provide exceptional support, boost visibility, and drive
+            innovation, helping your business thrive in the digital age.
+          </p>
+          <img class="what-we-do__logo" alt="Logo" src="img/Logo.svg" />
+        </div>
+      </section>
+
+      <!-- About Us Section -->
+      <section class="about-us">
+        <div class="about-us__header">
+          <span>Who</span>
+          <span class="we-are"> we are</span>
+        </div>
+        <div class="about-us__content">
+          <p>
+            I'm Peter Gustafsson, a passionate tech enthusiast born in 1985
+            and a proud family man. After years in traditional roles, I
+            pursued my passion for technology, focusing on front-end
+            development and soon transitioning into full-stack. I've teamed up
+            with a like-minded partner to launch a dynamic IT company offering
+            services like website development, security, and tech
+            installations. We're dedicated to providing impactful solutions
+            that help businesses succeed in the digital age.
+          </p>
+          <img class="about-us__image" alt="Peter Gustafsson" src="img/peter.png" />
+        </div>
+        <div class="about-us__content">
+          <p>
+            I'm Simon Tunje, and my passion for programming has opened a new
+            chapter in my life. I previously worked as a youth recreational
+            leader across Sweden, mentoring young people, and led scouts on
+            adventurous expeditions from 3,400-meter peaks to the deepest ice
+            caves. These experiences taught me resilience, problem-solving, and
+            teamwork. Now, I'm bringing that same drive to the world of
+            technology, eager to learn, grow, and make a meaningful impact.
+          </p>
+          <img class="about-us__image" alt="Simon Tunje" src="img/simon.png" />
+        </div>
+      </section>
+
+      <!-- Contact Us Section -->
+      <section class="contact-us">
+        <div class="contact-us__header">
+          <span>Lets Get in </span>
+          <span class="touch">Touch!</span>
+        </div>
+        <div class="contact-us__details">
+          <p class="contact-us__question">Got a question or need a hand?</p>
+          <p>
+            Reach out to us by email, phone, or through our contact form. We're
+            excited to help!
+          </p>
+          <div class="contact-us__info">
+            <p>Phone: +46blablabla</p>
+            <a class="contact-us__email" href="mailto:info@twinlogic-tech.se" target="_blank">
+              <span>info@twinlogic-tech.se</span>
+            </a>
+            <p>Address: Storgatan 54, 67 267 Helsingborg</p>
+          </div>
+        </div>
+        <form class="contact-us__form">
+          <label for="name">Full Name:</label>
+          <input type="text" name="name" id="name" />
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="email" />
+          <label for="message">Message</label>
+          <textarea name="message" id="message"></textarea>
+          <button type="submit" class="contact-us__submit">Let’s Go!</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer__copyright">
+        2024 Twin Logic Tech. All rights reserved, UX/UI Elin Bradway
+        <img class="footer__copyright-icon" alt="Copyright Icon" src="img/Copyright.svg" />
+      </div>
+    </footer>
+
+    <!-- Floating Button -->
+    <div class="floating-button" id="floatingButtonContainer">
+      <p class="floating-button__text">Get in touch</p>
+      <img class="floating-button__icon" alt="Caret Right Icon" src="img/CaretRight.svg" />
+    </div>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+@import "variables";
+@import "fonts";
+@import "colors";
+
+.footer {
+  text-align: center;
+  padding: $spacing-md 0;
+  background-color: $color-secondary;
+  font-size: $font-size-sm;
+  color: $color-text;
+
+  &__copyright {
+    img {
+      width: 16px;
+      height: 16px;
+      vertical-align: middle;
+    }
+  }
+}

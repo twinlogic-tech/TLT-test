@@ -1,0 +1,99 @@
+@import "variables";
+@import "fonts";
+@import "colors";
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 1226.377px;
+  height: 944.6px;
+  font-size: $font-size-xxl;
+  top: 159px;
+  left: 128px;
+  padding: $spacing-sm;
+  overflow: hidden;
+
+  &__welcome {
+    display: inline-block;
+    text-align: left;
+    font-family: $font-primary;
+    font-size: $font-size-xxl;
+    margin-top: 96px;
+    width: 898px;
+    background: $color-gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__subtext {
+    display: inline-block;
+    text-align: left;
+    font-size: $font-size-xl;
+    font-family: $font-light;
+    margin-top: $spacing-md;
+    font-weight: 300;
+    max-width: 440px;
+    background: $color-gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__cta {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 55px;
+    min-width: 281px;
+    top: 63px;
+    left: 59px;
+    border-radius: $border-radius-lg;
+    background: linear-gradient(90deg, rgba(51, 147, 176, 0.34), rgba(18, 20, 21, 0.34));
+    border: 2px solid rgba(93, 85, 85, 0.5);
+    padding: $spacing-sm;
+    font-size: $font-size-lg;
+    font-family: $font-secondary;
+    color: $color-text;
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+
+    &:hover {
+      background: rgba(51, 147, 176, 0.75);
+    }
+  }
+
+  &__video {
+    position: absolute;
+    top: 212px;
+    left: 49px;
+    width: 923px;
+    height: 478px;
+    z-index: -1;
+
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $color-overlay;
+  }
+
+  &__biohazard {
+    position: absolute;
+    bottom: $spacing-md;
+    right: $spacing-md;
+    width: 50px;
+    height: 50px;
+    z-index: 4;
+  }
+}

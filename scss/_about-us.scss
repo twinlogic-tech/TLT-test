@@ -1,0 +1,34 @@
+@import "variables";
+@import "fonts";
+@import "colors";
+
+.about-us {
+  max-width: 800px;
+  margin: $spacing-xl auto;
+  text-align: left;
+  padding: $spacing-md;
+
+  &__header {
+    font-size: $font-size-lg;
+    margin-bottom: $spacing-md;
+
+    .we-are {
+      background: $color-gradient;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  &__content {
+    p {
+      font-size: $font-size-md;
+      color: $color-text;
+    }
+
+    img {
+      width: 100px;
+      height: auto;
+      margin: $spacing-sm 0;
+    }
+  }
+}

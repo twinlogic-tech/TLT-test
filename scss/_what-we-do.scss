@@ -1,0 +1,34 @@
+@import "variables";
+@import "fonts";
+@import "colors";
+
+.what-we-do {
+  max-width: 800px;
+  margin: $spacing-xl auto;
+  text-align: left;
+  padding: $spacing-md;
+
+  &__text {
+    font-size: $font-size-lg;
+    margin-bottom: $spacing-md;
+
+    .we-do {
+      background: $color-gradient;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  &__card {
+    p {
+      font-size: $font-size-md;
+      color: $color-text;
+    }
+
+    img {
+      width: 50px;
+      height: auto;
+      margin: $spacing-sm 0;
+    }
+  }
+}

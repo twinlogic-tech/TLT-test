@@ -1,0 +1,328 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  line-height: normal;
+  background-color: #000;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "Audiowide", sans-serif;
+}
+
+.header {
+  padding: 24px 16px;
+}
+.header__navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 0;
+}
+.header__logo {
+  display: flex;
+  align-items: center;
+}
+.header__logo img {
+  width: 60px;
+  height: auto;
+  margin-right: 8px;
+}
+.header__logo p {
+  font-family: "Audiowide", sans-serif;
+  font-size: 28px;
+  background: linear-gradient(90deg, #45b4d6, #163e4a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.header__navigation ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  padding: 16px 0;
+}
+.header__navigation li {
+  cursor: pointer;
+  font-family: "Sansation", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.11em;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 4px 8px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+.header__navigation li:hover {
+  color: #45b4d6;
+  transform: scale(1.05);
+}
+.header__navigation li:hover::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #45b4d6;
+  animation: underline 0.3s ease;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 1226.377px;
+  height: 944.6px;
+  font-size: 58px;
+  top: 159px;
+  left: 128px;
+  padding: 8px;
+  overflow: hidden;
+}
+.hero__welcome {
+  display: inline-block;
+  text-align: left;
+  font-family: "Audiowide", sans-serif;
+  font-size: 58px;
+  margin-top: 96px;
+  width: 898px;
+  background: linear-gradient(90deg, #45b4d6, #163e4a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero__subtext {
+  display: inline-block;
+  text-align: left;
+  font-size: 32px;
+  font-family: "Sansation Light", sans-serif;
+  margin-top: 16px;
+  font-weight: 300;
+  max-width: 440px;
+  background: linear-gradient(90deg, #45b4d6, #163e4a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero__cta {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 55px;
+  min-width: 281px;
+  top: 63px;
+  left: 59px;
+  border-radius: 16px;
+  background: linear-gradient(90deg, rgba(51, 147, 176, 0.34), rgba(18, 20, 21, 0.34));
+  border: 2px solid rgba(93, 85, 85, 0.5);
+  padding: 8px;
+  font-size: 24px;
+  font-family: "Sansation", sans-serif;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
+}
+.hero__cta:hover {
+  background: rgba(51, 147, 176, 0.75);
+}
+.hero__video {
+  position: absolute;
+  top: 212px;
+  left: 49px;
+  width: 923px;
+  height: 478px;
+  z-index: -1;
+}
+.hero__video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-90deg, rgba(0, 0, 0, 0.01), #000 52.5%);
+}
+.hero__biohazard {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  width: 50px;
+  height: 50px;
+  z-index: 4;
+}
+
+.services {
+  display: flex;
+  justify-content: space-around;
+  padding: 32px 16px;
+}
+.services__card {
+  background: rgba(19, 55, 66, 0.8);
+  border-radius: 8px;
+  padding: 16px;
+  width: 300px;
+  text-align: center;
+}
+.services__card img {
+  width: 50px;
+  height: auto;
+  margin: 8px 0;
+}
+.services__card p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.what-we-do {
+  max-width: 800px;
+  margin: 32px auto;
+  text-align: left;
+  padding: 16px;
+}
+.what-we-do__text {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+.what-we-do__text .we-do {
+  background: linear-gradient(90deg, #45b4d6, #163e4a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.what-we-do__card p {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+}
+.what-we-do__card img {
+  width: 50px;
+  height: auto;
+  margin: 8px 0;
+}
+
+.about-us {
+  max-width: 800px;
+  margin: 32px auto;
+  text-align: left;
+  padding: 16px;
+}
+.about-us__header {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+.about-us__header .we-are {
+  background: linear-gradient(90deg, #45b4d6, #163e4a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.about-us__content p {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+}
+.about-us__content img {
+  width: 100px;
+  height: auto;
+  margin: 8px 0;
+}
+
+.contact-us {
+  padding: 32px 16px;
+  background-color: #163e4a;
+  text-align: center;
+}
+.contact-us__header {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+.contact-us__header .touch {
+  background: linear-gradient(90deg, #45b4d6, #163e4a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.contact-us__details p {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 8px;
+}
+.contact-us__details .contact-info p {
+  font-size: 14px;
+}
+.contact-us__details .contact-info a {
+  color: #45b4d6;
+  text-decoration: none;
+}
+.contact-us__details .contact-info a:hover {
+  text-decoration: underline;
+}
+.contact-us__form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.contact-us__form label {
+  text-align: left;
+  font-size: 14px;
+}
+.contact-us__form input,
+.contact-us__form textarea {
+  padding: 8px;
+  border: 1px solid rgba(93, 85, 85, 0.5);
+  border-radius: 4px;
+}
+.contact-us__form button {
+  background: linear-gradient(90deg, #45b4d6, #163e4a);
+  border: none;
+  border-radius: 16px;
+  padding: 8px 16px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.contact-us__form button:hover {
+  background: rgb(41.9030837004, 155.3480176211, 190.0969162996);
+}
+
+.footer {
+  text-align: center;
+  padding: 16px 0;
+  background-color: #163e4a;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+.footer__copyright img {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+}
+
+.floating-button {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  background: linear-gradient(90deg, #45b4d6, #163e4a);
+  border-radius: 16px;
+  padding: 8px 16px;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.3s ease;
+}
+.floating-button:hover {
+  background: rgb(41.9030837004, 155.3480176211, 190.0969162996);
+}
+.floating-button img {
+  width: 16px;
+  height: 16px;
+}
+
+/*# sourceMappingURL=main.css.map */
