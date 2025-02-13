@@ -1,3 +1,21 @@
+@font-face {
+  font-family: "Sansation";
+  src: url("../fonts/sansation/Sansation_Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Sansation Light";
+  src: url("../fonts/sansation/Sansation_Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Sansation";
+  src: url("../fonts/sansation/Sansation_Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
 * {
   margin: 0;
   padding: 0;
@@ -12,10 +30,37 @@ body {
   font-family: "Audiowide", sans-serif;
 }
 
+@font-face {
+  font-family: "Sansation";
+  src: url("../fonts/sansation/Sansation_Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Sansation Light";
+  src: url("../fonts/sansation/Sansation_Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Sansation";
+  src: url("../fonts/sansation/Sansation_Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
 .header {
+  /* position: fixed; */
+  width: 100%;
+  /* padding: 1rem 0; */
   padding: 24px 16px;
 }
 .header__navbar {
+  /*  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -70,116 +115,247 @@ body {
   animation: underline 0.3s ease;
 }
 
+@font-face {
+  font-family: "Sansation";
+  src: url("../fonts/sansation/Sansation_Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Sansation Light";
+  src: url("../fonts/sansation/Sansation_Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Sansation";
+  src: url("../fonts/sansation/Sansation_Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
 .hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
   position: relative;
-  width: 1226.377px;
   height: 944.6px;
-  font-size: 58px;
-  top: 159px;
-  left: 128px;
-  padding: 8px;
+  text-align: left;
+  font-size: 32px;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: Audiowide;
   overflow: hidden;
 }
+.hero__content-wrapper {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 16px;
+  height: 100%;
+}
+.hero__video {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1158.4px;
+  height: 944.6px;
+  z-index: -1;
+}
+.hero__video video {
+  position: absolute;
+  top: 212px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 923px;
+  height: 478px;
+}
+.hero__video-overlay1 {
+  position: absolute;
+  top: 110px;
+  left: 0;
+  background: linear-gradient(-90deg, rgba(0, 0, 0, 0.01), #000 52.5%);
+  width: 506px;
+  height: 602px;
+}
+.hero__video-overlay2 {
+  position: absolute;
+  top: 752.02px;
+  left: 1137.7px;
+  background: linear-gradient(-90deg, rgba(0, 0, 0, 0.01), #000 52.5%);
+  width: 506px;
+  height: 602px;
+  transform: rotate(-178deg);
+  transform-origin: 0 0;
+}
+.hero__video-overlay3 {
+  position: absolute;
+  top: 11.66px;
+  left: 956.89px;
+  background: linear-gradient(-90deg, rgba(0, 0, 0, 0.01), #000 52.5%);
+  width: 506px;
+  height: 714.7px;
+  transform: rotate(90.9deg);
+  transform-origin: 0 0;
+}
+.hero__video-overlay4 {
+  position: absolute;
+  top: 944.6px;
+  left: 285.87px;
+  background: linear-gradient(-90deg, rgba(0, 0, 0, 0.01), #000 52.5%);
+  width: 506px;
+  height: 714.7px;
+  transform: rotate(-93.2deg);
+  transform-origin: 0 0;
+}
+.hero__biohazard {
+  position: absolute;
+  top: 761px;
+  left: 856px;
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+}
 .hero__welcome {
-  display: inline-block;
-  text-align: left;
-  font-family: "Audiowide", sans-serif;
+  position: absolute;
+  top: 96px;
+  left: 84px;
   font-size: 58px;
-  margin-top: 96px;
-  width: 898px;
-  background: linear-gradient(90deg, #45b4d6, #163e4a);
+  line-height: 1.2;
+  background: linear-gradient(90deg, #45b4d6, #163e4a 71%, rgba(93, 81, 68, 0.75));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .hero__subtext {
-  display: inline-block;
-  text-align: left;
+  position: absolute;
+  top: 194px;
+  left: 84px;
   font-size: 32px;
-  font-family: "Sansation Light", sans-serif;
-  margin-top: 16px;
+  line-height: 1.4;
+  display: inline-block;
+  font-family: "Sansation Light", "Sansation", sans-serif;
   font-weight: 300;
-  max-width: 440px;
   background: linear-gradient(90deg, #45b4d6, #163e4a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  width: 440px;
 }
 .hero__cta {
+  position: absolute;
+  top: 329px;
+  left: 180px;
+  border-radius: 20px;
+  background: linear-gradient(90deg, rgba(51, 147, 176, 0.34), rgba(18, 20, 21, 0.34));
+  border: 2px solid rgba(93, 85, 85, 0.5);
+  box-sizing: border-box;
+  width: 281px;
+  height: 55px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  font-size: 24px;
+  font-family: Sansation;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.hero__cta:hover {
+  background: linear-gradient(90deg, rgba(51, 147, 176, 0.5), rgba(18, 20, 21, 0.5));
+}
+.hero__cta-text {
+  position: relative;
+}
+
+@font-face {
+  font-family: "Sansation";
+  src: url("../fonts/sansation/Sansation_Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Sansation Light";
+  src: url("../fonts/sansation/Sansation_Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Sansation";
+  src: url("../fonts/sansation/Sansation_Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+.services {
   position: relative;
   display: flex;
   justify-content: center;
-  height: 55px;
-  min-width: 281px;
-  top: 63px;
-  left: 59px;
-  border-radius: 16px;
-  background: linear-gradient(90deg, rgba(51, 147, 176, 0.34), rgba(18, 20, 21, 0.34));
-  border: 2px solid rgba(93, 85, 85, 0.5);
-  padding: 8px;
-  font-size: 24px;
-  font-family: "Sansation", sans-serif;
-  color: rgba(255, 255, 255, 0.7);
-  cursor: pointer;
-  transition: ease-in-out 0.3s;
+  gap: 74px;
+  padding: 40px 0;
+  margin-top: -160px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
-.hero__cta:hover {
-  background: rgba(51, 147, 176, 0.75);
-}
-.hero__video {
+.services__logo {
   position: absolute;
-  top: 212px;
-  left: 49px;
-  width: 923px;
-  height: 478px;
-  z-index: -1;
-}
-.hero__video video {
+  top: -190px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 235px;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.hero__overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(-90deg, rgba(0, 0, 0, 0.01), #000 52.5%);
-}
-.hero__biohazard {
-  position: absolute;
-  bottom: 16px;
-  right: 16px;
-  width: 50px;
-  height: 50px;
-  z-index: 4;
-}
-
-.services {
-  display: flex;
-  justify-content: space-around;
-  padding: 32px 16px;
+  z-index: 1;
 }
 .services__card {
   background: rgba(19, 55, 66, 0.8);
-  border-radius: 8px;
-  padding: 16px;
-  width: 300px;
+  border-radius: 20px;
+  height: 347px;
+  width: 278px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 24px;
 }
-.services__card img {
+.services__card-icon {
   width: 50px;
-  height: auto;
-  margin: 8px 0;
+  height: 50px;
+  margin-bottom: 16px;
 }
-.services__card p {
+.services__card-title {
+  font-size: 22px;
+  color: #45b4d6;
+  margin-bottom: 10px;
+}
+.services__card-description {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 8px;
+  padding: 0 20px;
+  line-height: 1.4;
+}
+.services__card-status {
   font-size: 14px;
   color: rgba(255, 255, 255, 0.7);
+  font-style: italic;
+  margin-top: 8px;
 }
 
+@font-face {
+  font-family: "Sansation";
+  src: url("../fonts/sansation/Sansation_Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Sansation Light";
+  src: url("../fonts/sansation/Sansation_Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Sansation";
+  src: url("../fonts/sansation/Sansation_Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
 .what-we-do {
   max-width: 800px;
   margin: 32px auto;
@@ -205,6 +381,24 @@ body {
   margin: 8px 0;
 }
 
+@font-face {
+  font-family: "Sansation";
+  src: url("../fonts/sansation/Sansation_Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Sansation Light";
+  src: url("../fonts/sansation/Sansation_Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Sansation";
+  src: url("../fonts/sansation/Sansation_Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
 .about-us {
   max-width: 800px;
   margin: 32px auto;
@@ -230,79 +424,305 @@ body {
   margin: 8px 0;
 }
 
-.contact-us {
-  padding: 32px 16px;
-  background-color: #163e4a;
+.contact-section {
+  width: 100%;
+  position: relative;
+  min-height: 509px;
   text-align: center;
+  font-size: 16px;
+  color: #fff;
+  font-family: "Sansation Light";
+  background-color: #000;
 }
-.contact-us__header {
-  font-size: 24px;
-  margin-bottom: 16px;
+.contact-section .contact-title-container {
+  width: auto;
+  text-align: center;
+  font-size: 32px;
+  font-family: Audiowide;
+  margin: 0 auto 40px;
+  padding-top: 40px;
 }
-.contact-us__header .touch {
-  background: linear-gradient(90deg, #45b4d6, #163e4a);
+.contact-section .contact-title-container .touch {
+  background: linear-gradient(90deg, #3393b0, #163e4a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.contact-us__details p {
-  font-size: 16px;
-  color: rgba(255, 255, 255, 0.7);
-  margin-bottom: 8px;
-}
-.contact-us__details .contact-info p {
-  font-size: 14px;
-}
-.contact-us__details .contact-info a {
-  color: #45b4d6;
-  text-decoration: none;
-}
-.contact-us__details .contact-info a:hover {
-  text-decoration: underline;
-}
-.contact-us__form {
-  max-width: 600px;
+.contact-section__content {
+  max-width: 1000px;
   margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.contact-section-text {
+  flex: 1;
+  max-width: 335px;
+  background-color: rgba(175, 179, 255, 0);
+  border: 1px solid rgba(93, 81, 68, 0.75);
+  border-radius: 15px;
+  padding: 40px;
+  text-align: left;
+}
+
+.contact-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 20px;
+}
+
+.got-a-question-container {
+  line-height: 23px;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.group-child {
+  width: 100%;
+  border-top: 1px solid rgba(93, 81, 68, 0.75);
+  margin: 10px 0;
+}
+
+.cantact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.blablabla {
+  letter-spacing: 0.18em;
+  font-weight: 300;
+}
+
+.infotwinlogic-techse {
+  color: inherit;
+  text-decoration: underline;
+  font-weight: 300;
+}
+
+.storgatan-54-67-container {
+  font-weight: 300;
+  width: 190px;
+}
+.storgatan-54-67-container .helsingborg {
+  margin: 0;
+}
+
+.icbaseline-phone-icon,
+.icbaseline-email-icon,
+.mdiaddress-marker-icon {
+  width: 25px;
+  height: 25px;
+  overflow: hidden;
+}
+
+.tinted-logo-icon {
+  position: static;
+  width: 200px;
+  height: 200px;
+  margin-top: auto;
+  align-self: center;
+}
+
+.contact-form {
+  flex: 1;
+  max-width: 448px;
+  background-color: rgba(175, 179, 255, 0);
+  border: 1px solid rgba(93, 81, 68, 0.75);
+  border-radius: 15px;
+  padding: 40px;
+}
+
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 24px;
+}
+
+.form-group {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  position: relative;
 }
-.contact-us__form label {
-  text-align: left;
-  font-size: 14px;
+.form-group label {
+  position: static;
+  font-weight: 300;
 }
-.contact-us__form input,
-.contact-us__form textarea {
-  padding: 8px;
-  border: 1px solid rgba(93, 85, 85, 0.5);
-  border-radius: 4px;
+
+.contact-form-child,
+.contact-form-item,
+.contact-form-inner {
+  width: 100%;
+  background-color: rgba(175, 179, 255, 0);
+  border: 1px solid rgba(93, 81, 68, 0.75);
+  padding: 10px;
 }
-.contact-us__form button {
-  background: linear-gradient(90deg, #45b4d6, #163e4a);
+
+.contact-form-child,
+.contact-form-item {
+  height: 45px;
+  border-radius: 10px;
+}
+
+.contact-form-inner {
+  height: 215px;
+  border-radius: 15px;
+  resize: none;
+}
+
+.full-name,
+.email,
+.message {
+  position: static;
+  width: auto;
+  height: auto;
+}
+
+.lets-go-wrapper {
+  align-self: flex-end;
+  border-radius: 12px;
+  background: linear-gradient(90deg, rgba(49, 140, 168, 0.75), rgba(22, 62, 74, 0.75));
+  width: 172px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: none;
-  border-radius: 16px;
-  padding: 8px 16px;
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 16px;
   cursor: pointer;
-  transition: background 0.3s ease;
-}
-.contact-us__form button:hover {
-  background: rgb(41.9030837004, 155.3480176211, 190.0969162996);
+  color: #fff;
+  font-family: Sansation;
+  margin-top: auto;
 }
 
+@font-face {
+  font-family: "Sansation";
+  src: url("../fonts/sansation/Sansation_Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Sansation Light";
+  src: url("../fonts/sansation/Sansation_Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Sansation";
+  src: url("../fonts/sansation/Sansation_Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
 .footer {
-  text-align: center;
-  padding: 16px 0;
-  background-color: #163e4a;
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.7);
-}
-.footer__copyright img {
-  width: 16px;
-  height: 16px;
-  vertical-align: middle;
+  width: 100%;
+  background-color: #000;
+  padding: 40px 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
+.socialmedia-links {
+  width: 100%;
+  position: relative;
+  height: 30px;
+  max-width: 150px;
+}
+
+.social-icons,
+.social-icons1,
+.social-icons2,
+.social-icons3 {
+  position: absolute;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+}
+
+.social-icons {
+  left: 0;
+}
+
+.social-icons1 {
+  left: 40px;
+}
+
+.social-icons2 {
+  left: 80px;
+}
+
+.social-icons3 {
+  left: 120px;
+}
+
+.vector-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+}
+
+.copyright {
+  width: 100%;
+  position: relative;
+  height: 20px;
+  text-align: left;
+  font-size: 12px;
+  font-family: Sansation;
+  max-width: 400px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.copyright-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.twin-logic-tech {
+  position: absolute;
+  top: 3px;
+  left: 23px;
+  background: linear-gradient(90deg, #318ca8 62%, #133742);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+}
+
+@font-face {
+  font-family: "Sansation";
+  src: url("../fonts/sansation/Sansation_Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Sansation Light";
+  src: url("../fonts/sansation/Sansation_Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Sansation";
+  src: url("../fonts/sansation/Sansation_Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
 .floating-button {
   position: fixed;
   bottom: 32px;
@@ -318,11 +738,118 @@ body {
   transition: background 0.3s ease;
 }
 .floating-button:hover {
-  background: rgb(41.9030837004, 155.3480176211, 190.0969162996);
+  background: #2a9bbe;
 }
 .floating-button img {
   width: 16px;
   height: 16px;
 }
 
-/*# sourceMappingURL=main.css.map */
+.about,
+.team {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 16px;
+  text-align: center;
+}
+
+.what-we-do-container {
+  width: auto;
+  position: relative;
+  font-size: 32px;
+  font-family: Audiowide;
+  text-align: center;
+  display: inline-block;
+  color: #fff;
+  margin-bottom: 24px;
+}
+.what-we-do-container .we-do {
+  background: linear-gradient(90deg, #3393b0, #163e4a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-card-1 {
+  width: 100%;
+  position: relative;
+  border-radius: 15px;
+  border: 1px solid rgba(93, 85, 85, 0.7);
+  box-sizing: border-box;
+  height: 328px;
+  margin-bottom: 64px;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+.about-card-1__text {
+  max-width: 60%;
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: left;
+}
+.about-card-1__name {
+  font-size: 24px;
+  color: #45b4d6;
+  font-family: Audiowide;
+  margin-bottom: 8px;
+}
+.about-card-1__role {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 16px;
+  font-style: italic;
+}
+.about-card-1__description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+}
+.about-card-1__logo {
+  width: 200px;
+  height: auto;
+}
+.team .about-card-1__logo {
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.about-card-1--reversed {
+  flex-direction: row-reverse;
+}
+
+.team__members {
+  display: flex;
+  justify-content: center;
+  gap: 64px;
+  margin-top: 40px;
+}
+.team__member {
+  width: 300px;
+  text-align: center;
+}
+.team__member-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 24px;
+  object-fit: cover;
+}
+.team__member-name {
+  font-size: 24px;
+  color: #45b4d6;
+  margin-bottom: 8px;
+  font-family: Audiowide;
+}
+.team__member-role {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 16px;
+}
+.team__member-description {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+}

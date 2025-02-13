@@ -7,3 +7,127 @@
 @import "contact-us";
 @import "footer";
 @import "floating-button";
+
+.about,
+.team {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 16px;
+  text-align: center;
+}
+
+.what-we-do-container {
+  width: auto;
+  position: relative;
+  font-size: 32px;
+  font-family: Audiowide;
+  text-align: center;
+  display: inline-block;
+  color: #fff;
+  margin-bottom: 24px;
+
+  .we-do {
+    background: linear-gradient(90deg, #3393b0, #163e4a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.about-card-1 {
+  width: 100%;
+  position: relative;
+  border-radius: 15px;
+  border: 1px solid rgba(93, 85, 85, 0.7);
+  box-sizing: border-box;
+  height: 328px;
+  margin-bottom: 64px;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+
+  &__text {
+    max-width: 60%;
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: left;
+  }
+
+  &__name {
+    font-size: 24px;
+    color: $color-primary;
+    font-family: Audiowide;
+    margin-bottom: 8px;
+  }
+
+  &__role {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 16px;
+    font-style: italic;
+  }
+
+  &__description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  &__logo {
+    width: 200px;
+    height: auto;
+
+    .team & {
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+
+  &--reversed {
+    flex-direction: row-reverse;
+  }
+}
+
+.team {
+  &__members {
+    display: flex;
+    justify-content: center;
+    gap: 64px;
+    margin-top: 40px;
+  }
+
+  &__member {
+    width: 300px;
+    text-align: center;
+
+    &-image {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      margin-bottom: 24px;
+      object-fit: cover;
+    }
+
+    &-name {
+      font-size: 24px;
+      color: $color-primary;
+      margin-bottom: 8px;
+      font-family: Audiowide;
+    }
+
+    &-role {
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 16px;
+    }
+
+    &-description {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.6;
+    }
+  }
+}

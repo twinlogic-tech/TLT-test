@@ -1,3 +1,24 @@
+@font-face {
+  font-family: "Sansation";
+  src: url("../fonts/sansation/Sansation_Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sansation Light";
+  src: url("../fonts/sansation/Sansation_Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sansation";
+  src: url("../fonts/sansation/Sansation_Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
 // Font Families
 $font-primary: "Audiowide", sans-serif;
 $font-secondary: "Sansation", sans-serif;

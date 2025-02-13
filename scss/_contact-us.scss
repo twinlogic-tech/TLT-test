@@ -1,78 +1,191 @@
-@import "variables";
-@import "fonts";
-@import "colors";
-
-.contact-us {
-  padding: $spacing-xl $spacing-md;
-  background-color: $color-secondary;
+.contact-section {
+  width: 100%;
+  position: relative;
+  min-height: 509px;
   text-align: center;
+  font-size: 16px;
+  color: #fff;
+  font-family: "Sansation Light";
+  background-color: #000;
 
-  &__header {
-    font-size: $font-size-lg;
-    margin-bottom: $spacing-md;
+  .contact-title-container {
+    width: auto;
+    text-align: center;
+    font-size: 32px;
+    font-family: Audiowide;
+    margin: 0 auto 40px;
+    padding-top: 40px;
 
     .touch {
-      background: $color-gradient;
+      background: linear-gradient(90deg, #3393b0, #163e4a);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
   }
 
-  &__details {
-    p {
-      font-size: $font-size-md;
-      color: $color-text;
-      margin-bottom: $spacing-sm;
-    }
-
-    .contact-info {
-      p {
-        font-size: $font-size-sm;
-      }
-
-      a {
-        color: $color-primary;
-        text-decoration: none;
-
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-    }
-  }
-
-  &__form {
-    max-width: 600px;
+  &__content {
+    max-width: 1000px;
     margin: 0 auto;
+    padding: 0 16px;
     display: flex;
-    flex-direction: column;
-    gap: $spacing-sm;
-
-    label {
-      text-align: left;
-      font-size: $font-size-sm;
-    }
-
-    input,
-    textarea {
-      padding: $spacing-sm;
-      border: 1px solid rgba(93, 85, 85, 0.5);
-      border-radius: $border-radius-sm;
-    }
-
-    button {
-      background: $color-gradient;
-      border: none;
-      border-radius: $border-radius-lg;
-      padding: $spacing-sm $spacing-md;
-      color: $color-text;
-      font-size: $font-size-md;
-      cursor: pointer;
-      transition: background 0.3s ease;
-
-      &:hover {
-        background: darken($color-primary, 10%);
-      }
-    }
+    justify-content: space-between;
+    gap: 40px;
   }
+}
+
+// Left side styles
+.contact-section-text {
+  flex: 1;
+  max-width: 335px;
+  background-color: rgba(175, 179, 255, 0);
+  border: 1px solid rgba(93, 81, 68, 0.75);
+  border-radius: 15px;
+  padding: 40px;
+  text-align: left;
+}
+
+.contact-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 20px;
+}
+
+.got-a-question-container {
+  line-height: 23px;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.group-child {
+  width: 100%;
+  border-top: 1px solid rgba(93, 81, 68, 0.75);
+  margin: 10px 0;
+}
+
+.cantact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.blablabla {
+  letter-spacing: 0.18em;
+  font-weight: 300;
+}
+
+.infotwinlogic-techse {
+  color: inherit;
+  text-decoration: underline;
+  font-weight: 300;
+}
+
+.storgatan-54-67-container {
+  font-weight: 300;
+  width: 190px;
+
+  .helsingborg {
+    margin: 0;
+  }
+}
+
+.icbaseline-phone-icon,
+.icbaseline-email-icon,
+.mdiaddress-marker-icon {
+  width: 25px;
+  height: 25px;
+  overflow: hidden;
+}
+
+.tinted-logo-icon {
+  position: static;
+  width: 200px;
+  height: 200px;
+  margin-top: auto;
+  align-self: center;
+}
+
+// Right side styles
+.contact-form {
+  flex: 1;
+  max-width: 448px;
+  background-color: rgba(175, 179, 255, 0);
+  border: 1px solid rgba(93, 81, 68, 0.75);
+  border-radius: 15px;
+  padding: 40px;
+}
+
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 24px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+
+  label {
+    position: static;
+    font-weight: 300;
+  }
+}
+
+.contact-form-child,
+.contact-form-item,
+.contact-form-inner {
+  width: 100%;
+  background-color: rgba(175, 179, 255, 0);
+  border: 1px solid rgba(93, 81, 68, 0.75);
+  padding: 10px;
+}
+
+.contact-form-child,
+.contact-form-item {
+  height: 45px;
+  border-radius: 10px;
+}
+
+.contact-form-inner {
+  height: 215px;
+  border-radius: 15px;
+  resize: none;
+}
+
+// Remove absolute positioning from labels
+.full-name,
+.email,
+.message {
+  position: static;
+  width: auto;
+  height: auto;
+}
+
+.lets-go-wrapper {
+  align-self: flex-end;
+  border-radius: 12px;
+  background: linear-gradient(
+    90deg,
+    rgba(49, 140, 168, 0.75),
+    rgba(22, 62, 74, 0.75)
+  );
+  width: 172px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-family: Sansation;
+  margin-top: auto;
 }

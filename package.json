@@ -1,0 +1,25 @@
+{
+  "name": "tlt-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass scss/main.scss css/main.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/twinlogic-tech/TLT-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/twinlogic-tech/TLT-test/issues"
+  },
+  "homepage": "https://github.com/twinlogic-tech/TLT-test#readme",
+  "devDependencies": {
+    "sass": "^1.84.0"
+  }
+}

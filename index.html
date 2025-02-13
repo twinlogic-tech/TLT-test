@@ -6,7 +6,12 @@
     <link rel="icon" type="image/svg+xml" href="img/Group 11.svg" />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Audiowide:wght@400&display=swap" />
+      href="https://fonts.googleapis.com/css2?family=Audiowide:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:wght@300;400&display=swap"
+    />
     <!-- <link rel="stylesheet" href="style/normalize.css" /> -->
     <link rel="stylesheet" href="scss/main.css" />
     <title>Twin Logic Tech</title>
@@ -15,7 +20,11 @@
     <header class="header">
       <section class="header__navbar">
         <div class="header__logo">
-          <img class="header__logo-image" alt="Twin Logic Tech Logo" src="img/Group 11.svg" />
+          <img
+            class="header__logo-image"
+            alt="Twin Logic Tech Logo"
+            src="img/Group 11.svg"
+          />
           <div class="header__logo-text"><p>Twin Logic Tech</p></div>
         </div>
         <nav class="header__navigation">
@@ -29,60 +38,77 @@
     </header>
 
     <main>
-      <!-- Hero Section -->
+      <!----- Hero Section ----->
       <section class="hero">
-        <p class="hero__welcome">Welcome to Twin Logic Tech</p>
-        <i class="hero__subtext">Innovative Solutions to Drive Your Business Forward.</i>
-        <button class="hero__cta">
-          <b class="hero__cta-text">Learn more</b>
-        </button>
         <div class="hero__video">
-          <video
-            class="hero__background-video"
-            autoplay
-            loop
-            muted
-            playsinline
-            src="/video/-3016-4895-89a5-b37bf071911b.mp4"
-            type="video/mp4">
+          <video autoplay loop muted playsinline>
+            <source src="/videos/test2.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-          <div class="hero__overlay"></div>
-          <img class="hero__biohazard" alt="Biohazard Icon" src="img/Biohazard.svg" />
+          <div class="hero__video-overlay1"></div>
+          <div class="hero__video-overlay2"></div>
+          <div class="hero__video-overlay3"></div>
+          <div class="hero__video-overlay4"></div>
+        </div>
+        <div class="hero__content-wrapper">
+          <h1 class="hero__welcome">Welcome to Twin Logic Tech</h1>
+          <p class="hero__subtext">
+            Innovative Solutions to Drive Your Business Forward.
+          </p>
+          <button class="hero__cta">
+            <span class="hero__cta-text">Learn more</span>
+          </button>
         </div>
       </section>
 
-      <!-- Services Section -->
+      <!----- Services Section ----->
       <section class="services">
+        <img
+          class="services__logo"
+          src="img/Group 11.svg"
+          alt="Twin Logic Tech Logo"
+        />
         <div class="services__card">
+          <img
+            class="services__card-icon"
+            alt="Tree structure Icon"
+            src="img/TreeStructure.svg"
+          />
           <p class="services__card-title">Backend solutions</p>
-          <img class="services__card-icon" alt="Tree structure Icon" src="img/TreeStructure.svg" />
           <p class="services__card-status">coming soon..</p>
         </div>
         <div class="services__card">
+          <img
+            class="services__card-icon"
+            alt="Git Diff Icon"
+            src="img/GitDiff.svg"
+          />
+          <p class="services__card-title">Front-end development</p>
+          <p class="services__card-description">
+            Need a sleek, responsive website? Our front-end development services
+            ensure your site looks great and works flawlessly on all devices.
+          </p>
+          <p><b>Let's build something amazing together!</b></p>
+        </div>
+        <div class="services__card">
+          <img
+            class="services__card-icon"
+            alt="Biohazard Icon"
+            src="img/Biohazard.svg"
+          />
           <p class="services__card-title">Cyber security</p>
           <p class="services__card-status">coming soon..</p>
         </div>
-        <div class="services__card">
-          <p class="services__card-title">Front-end development</p>
-          <img class="services__card-icon" alt="Git Diff Icon" src="img/GitDiff.svg" />
-          <p class="services__card-description">
-            Need a sleek, responsive website? Our front-end development
-            services ensure your site looks great and works flawlessly on all
-            devices.
-          </p>
-          <p><b>Let’s build something amazing together!</b></p>
-        </div>
       </section>
 
-      <!-- What We Do Section -->
-      <section class="what-we-do">
-        <div class="what-we-do__text">
+      <!----- What We Do Section ----->
+      <section class="about">
+        <div class="what-we-do-container">
           <span>What</span>
           <span class="we-do"> we do</span>
         </div>
-        <div class="what-we-do__card">
-          <p>
+        <div class="about-card-1">
+          <p class="about-card-1__text">
             Twin Logic Tech was founded by two IT enthusiasts from an IT program
             in Helsingborg, Sweden, with a clear vision: to create a company
             that attracts talented collaborators and engages dynamic clients.
@@ -92,87 +118,172 @@
             to provide exceptional support, boost visibility, and drive
             innovation, helping your business thrive in the digital age.
           </p>
-          <img class="what-we-do__logo" alt="Logo" src="img/Logo.svg" />
+          <img class="about-card-1__logo" alt="Logo" src="img/Logo.svg" />
         </div>
       </section>
 
-      <!-- About Us Section -->
-      <section class="about-us">
-        <div class="about-us__header">
+      <!----- About Us Section ----->
+      <!----- Who We Are Section ----->
+      <section class="team">
+        <div class="what-we-do-container">
           <span>Who</span>
-          <span class="we-are"> we are</span>
+          <span class="we-do"> we are</span>
         </div>
-        <div class="about-us__content">
-          <p>
-            I'm Peter Gustafsson, a passionate tech enthusiast born in 1985
-            and a proud family man. After years in traditional roles, I
-            pursued my passion for technology, focusing on front-end
-            development and soon transitioning into full-stack. I've teamed up
-            with a like-minded partner to launch a dynamic IT company offering
-            services like website development, security, and tech
-            installations. We're dedicated to providing impactful solutions
-            that help businesses succeed in the digital age.
-          </p>
-          <img class="about-us__image" alt="Peter Gustafsson" src="img/peter.png" />
+
+        <!----- Peter's Card ----->
+        <div class="about-card-1">
+          <div class="about-card-1__text">
+            <h3 class="about-card-1__name">Peter Gustafsson</h3>
+            <p class="about-card-1__role">Co-founder & Developer</p>
+            <p class="about-card-1__description">
+              I'm Peter Gustafsson, a passionate tech enthusiast born in 1985
+              and a proud family man. After years in traditional roles, I
+              pursued my passion for technology, focusing on front-end
+              development and soon transitioning into full-stack. I've teamed up
+              with a like-minded partner to launch a dynamic IT company offering
+              services like website development, security, and tech
+              installations. We're dedicated to providing impactful solutions
+              that help businesses succeed in the digital age.
+            </p>
+          </div>
+          <img src="img/peter.png" alt="Peter" class="about-card-1__logo" />
         </div>
-        <div class="about-us__content">
-          <p>
-            I'm Simon Tunje, and my passion for programming has opened a new
-            chapter in my life. I previously worked as a youth recreational
-            leader across Sweden, mentoring young people, and led scouts on
-            adventurous expeditions from 3,400-meter peaks to the deepest ice
-            caves. These experiences taught me resilience, problem-solving, and
-            teamwork. Now, I'm bringing that same drive to the world of
-            technology, eager to learn, grow, and make a meaningful impact.
-          </p>
-          <img class="about-us__image" alt="Simon Tunje" src="img/simon.png" />
+
+        <!----- Simon's Card ----->
+        <div class="about-card-1 about-card-1--reversed">
+          <div class="about-card-1__text">
+            <h3 class="about-card-1__name">Simon Tunje</h3>
+            <p class="about-card-1__role">Co-founder & Developer</p>
+            <p class="about-card-1__description">
+              I'm Simon Tunje, and my passion for programming has opened a new
+              chapter in my life. I previously worked as a youth recreational
+              leader across Sweden, mentoring young people, and led scouts on
+              adventurous expeditions from 3,400-meter peaks to the deepest ice
+              caves. These experiences taught me resilience, problem-solving,
+              and teamwork. Now, I'm bringing that same drive to the world of
+              technology, eager to learn, grow, and make a meaningful impact.
+            </p>
+          </div>
+          <img src="img/simon.png" alt="Simon" class="about-card-1__logo" />
         </div>
       </section>
 
-      <!-- Contact Us Section -->
-      <section class="contact-us">
-        <div class="contact-us__header">
-          <span>Lets Get in </span>
-          <span class="touch">Touch!</span>
+      <!----- Contact Section ----->
+      <section class="contact-section">
+        <div class="contact-title-container">
+          <span>Let's Get in</span>
+          <span class="touch"> Touch!</span>
         </div>
-        <div class="contact-us__details">
-          <p class="contact-us__question">Got a question or need a hand?</p>
-          <p>
-            Reach out to us by email, phone, or through our contact form. We're
-            excited to help!
-          </p>
-          <div class="contact-us__info">
-            <p>Phone: +46blablabla</p>
-            <a class="contact-us__email" href="mailto:info@twinlogic-tech.se" target="_blank">
-              <span>info@twinlogic-tech.se</span>
-            </a>
-            <p>Address: Storgatan 54, 67 267 Helsingborg</p>
+        <div class="contact-section__content">
+          <!----- Left Side ----->
+          <div class="contact-section-text">
+            <div class="contact-info-wrapper">
+              <p class="got-a-question-container">
+                Got a question or need a hand?<br />
+                Reach out to us by email, phone, or<br />
+                through our contact form.<br /><br />
+                We're excited to help!
+              </p>
+              <div class="group-child"></div>
+
+              <div class="cantact-info">
+                <div class="contact-item">
+                  <img
+                    src="img/ic_baseline-phone.svg"
+                    alt=""
+                    class="icbaseline-phone-icon"
+                  />
+                  <span class="blablabla">+46blablabla</span>
+                </div>
+                <div class="contact-item">
+                  <img
+                    src="img/ic_baseline-email.svg"
+                    alt=""
+                    class="icbaseline-email-icon"
+                  />
+                  <a
+                    href="mailto:info@twinlogic-tech.se"
+                    class="infotwinlogic-techse"
+                    >info@twinlogic-tech.se</a
+                  >
+                </div>
+                <div class="contact-item">
+                  <img
+                    src="img/mdi_address-marker.svg"
+                    alt=""
+                    class="mdiaddress-marker-icon"
+                  />
+                  <div class="storgatan-54-67-container">
+                    <p class="helsingborg">Storgatan 54</p>
+                    <p class="helsingborg">67 267 Helsingborg</p>
+                  </div>
+                </div>
+              </div>
+
+              <img class="tinted-logo-icon" src="img/Tinted-Logo.svg" alt="" />
+            </div>
+          </div>
+
+          <!----- Right Side - Contact Form ----->
+          <div class="contact-form">
+            <div class="form-wrapper">
+              <div class="form-group">
+                <label class="full-name">Full Name</label>
+                <input type="text" class="contact-form-child" required />
+              </div>
+
+              <div class="form-group">
+                <label class="email">Email</label>
+                <input type="email" class="contact-form-item" required />
+              </div>
+
+              <div class="form-group">
+                <label class="message">Message</label>
+                <textarea class="contact-form-inner" required></textarea>
+              </div>
+
+              <button type="submit" class="lets-go-wrapper">
+                <span class="lets-go">Let's go!</span>
+              </button>
+            </div>
           </div>
         </div>
-        <form class="contact-us__form">
-          <label for="name">Full Name:</label>
-          <input type="text" name="name" id="name" />
-          <label for="email">Email:</label>
-          <input type="email" name="email" id="email" />
-          <label for="message">Message</label>
-          <textarea name="message" id="message"></textarea>
-          <button type="submit" class="contact-us__submit">Let’s Go!</button>
-        </form>
       </section>
     </main>
 
-    <!-- Footer -->
+    <!----- Footer ----->
     <footer class="footer">
-      <div class="footer__copyright">
-        2024 Twin Logic Tech. All rights reserved, UX/UI Elin Bradway
-        <img class="footer__copyright-icon" alt="Copyright Icon" src="img/Copyright.svg" />
+      <div class="socialmedia-links">
+        <a href="#" target="_blank" class="social-icons">
+          <img src="img/Linkedin.png" alt="Social Icon" class="vector-icon" />
+        </a>
+        <a href="#" target="_blank" class="social-icons1">
+          <img src="img/Insta.svg" alt="Social Icon" class="vector-icon" />
+        </a>
+        <a href="#" target="_blank" class="social-icons2">
+          <img src="img/X.svg" alt="Social Icon" class="vector-icon" />
+        </a>
+        <a href="#" target="_blank" class="social-icons3">
+          <img src="img/Github.svg" alt="Social Icon" class="vector-icon" />
+        </a>
+      </div>
+
+      <div class="copyright">
+        <img src="img/copyright.svg" alt="Copyright" class="copyright-icon" />
+        <span class="twin-logic-tech"
+          >2024 Twin Logic Tech. All rights reserved, UX/UI Elin Bradway</span
+        >
       </div>
     </footer>
 
-    <!-- Floating Button -->
+    <!----- Floating Button ----->
     <div class="floating-button" id="floatingButtonContainer">
       <p class="floating-button__text">Get in touch</p>
-      <img class="floating-button__icon" alt="Caret Right Icon" src="img/CaretRight.svg" />
+      <img
+        class="floating-button__icon"
+        alt="Caret Right Icon"
+        src="img/CaretRight.svg"
+      />
     </div>
   </body>
 </html>

@@ -3,9 +3,18 @@
 @import "colors";
 
 .header {
+  /* position: fixed; */
+  width: 100%;
+  /* padding: 1rem 0; */
   padding: 24px 16px;
 
   &__navbar {
+    /*  max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -54,9 +63,9 @@
       &:hover {
         color: $color-primary;
         transform: scale(1.05);
-        
+
         &::after {
-          content: '';
+          content: "";
           position: absolute;
           bottom: -4px;
           left: 0;

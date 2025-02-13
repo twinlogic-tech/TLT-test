@@ -3,17 +3,86 @@
 @import "colors";
 
 .footer {
-  text-align: center;
-  padding: $spacing-md 0;
-  background-color: $color-secondary;
-  font-size: $font-size-sm;
-  color: $color-text;
+  width: 100%;
+  background-color: #000;
+  padding: 40px 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
 
-  &__copyright {
-    img {
-      width: 16px;
-      height: 16px;
-      vertical-align: middle;
-    }
-  }
+// Social Media Links
+.socialmedia-links {
+  width: 100%;
+  position: relative;
+  height: 30px;
+  max-width: 150px;
+}
+
+.social-icons,
+.social-icons1,
+.social-icons2,
+.social-icons3 {
+  position: absolute;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+}
+
+.social-icons {
+  left: 0;
+}
+
+.social-icons1 {
+  left: 40px;
+}
+
+.social-icons2 {
+  left: 80px;
+}
+
+.social-icons3 {
+  left: 120px;
+}
+
+.vector-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+}
+
+// Copyright Section
+.copyright {
+  width: 100%;
+  position: relative;
+  height: 20px;
+  text-align: left;
+  font-size: 12px;
+  font-family: Sansation;
+  max-width: 400px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.copyright-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.twin-logic-tech {
+  position: absolute;
+  top: 3px;
+  left: 23px;
+  background: linear-gradient(90deg, #318ca8 62%, #133742);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
 }
