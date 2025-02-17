@@ -60,6 +60,14 @@
       transition: all 0.3s ease;
       position: relative;
 
+      a {
+        color: inherit;
+        text-decoration: none;
+        font-family: inherit;
+        font-size: inherit;
+        letter-spacing: inherit;
+      }
+
       &:hover {
         color: $color-primary;
         transform: scale(1.05);

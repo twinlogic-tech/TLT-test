@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Sansation";
   src: url("../fonts/sansation/Sansation_Light.ttf") format("truetype");
@@ -99,6 +100,13 @@ body {
   padding: 4px 8px;
   transition: all 0.3s ease;
   position: relative;
+}
+.header__navigation li a {
+  color: inherit;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: inherit;
+  letter-spacing: inherit;
 }
 .header__navigation li:hover {
   color: #45b4d6;
@@ -338,6 +346,537 @@ body {
   margin-top: 8px;
 }
 
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+}
+.modal .modal-content {
+  position: relative;
+  background: linear-gradient(145deg, #1f1f1f, #2a2a2a);
+  margin: 15% auto;
+  padding: 30px;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+.modal .modal-content h2 {
+  font-family: "Audiowide", sans-serif;
+  color: #3393b0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.modal .modal-content .close {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  color: #999;
+  font-size: 28px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.modal .modal-content .close:hover {
+  color: #3393b0;
+}
+
+.request-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.request-form label {
+  font-family: "Sansation", sans-serif;
+  color: #e0e0e0;
+  margin-bottom: 5px;
+}
+.request-form input[type=text],
+.request-form input[type=email],
+.request-form textarea {
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #e0e0e0;
+  font-family: "Sansation", sans-serif;
+}
+.request-form input[type=text]:focus,
+.request-form input[type=email]:focus,
+.request-form textarea:focus {
+  outline: none;
+  border-color: #3393b0;
+}
+.request-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+.request-form input[type=submit] {
+  padding: 12px 24px;
+  background: linear-gradient(90deg, #3393b0, #163e4a);
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-family: "Sansation", sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+.request-form input[type=submit]:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(51, 147, 176, 0.3);
+}
+
+.expanded-view {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+}
+.expanded-view .expanded-content {
+  position: relative;
+  background: linear-gradient(145deg, #1f1f1f, #2a2a2a);
+  margin: 5% auto;
+  padding: 30px;
+  width: 90%;
+  max-width: 800px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+.expanded-view .close-expanded {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  color: #999;
+  font-size: 28px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.expanded-view .close-expanded:hover {
+  color: #3393b0;
+}
+.expanded-view .expanded-inner {
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .services {
+    gap: 30px;
+  }
+  .services__card {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+main {
+  padding: 2rem;
+}
+
+.section-title {
+  color: #3393b0;
+  font-family: "Audiowide", sans-serif;
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.main-packages {
+  margin-bottom: 4rem;
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+.services-container.primary-services {
+  margin-bottom: 4rem;
+}
+.services-container.secondary-services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.primary-services {
+  justify-content: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.primary-services .service-card {
+  flex: 1 1 300px;
+  max-width: 400px;
+}
+
+.secondary-services {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.secondary-services .service-card {
+  flex: 1 1 300px;
+  max-width: 380px;
+}
+
+.service-card {
+  background: linear-gradient(135deg, #163e4a 0%, #0a1f25 100%);
+  border-radius: 15px;
+  padding: 2rem;
+  position: relative;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.service-card .brief-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.service-card .detailed-content {
+  display: none;
+}
+.service-card.expanded {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  max-width: 800px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: linear-gradient(135deg, #163e4a 0%, #0a1f25 100%);
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.5);
+  cursor: auto;
+}
+.service-card.expanded .brief-content {
+  display: none;
+}
+.service-card.expanded .detailed-content {
+  display: block;
+  padding: 1rem;
+}
+.service-card h2 {
+  color: #3393b0;
+  font-family: "Audiowide", sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+.service-card h3 {
+  color: #fff;
+  font-family: "Sansation", sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+}
+.service-card h4 {
+  color: #3393b0;
+  font-family: "Sansation", sans-serif;
+  font-size: 1.3rem;
+  margin: 1rem 0;
+}
+.service-card ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+.service-card ul li {
+  color: #fff;
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  font-family: "Sansation", sans-serif;
+}
+.service-card ul li:before {
+  content: "•";
+  color: #3393b0;
+  position: absolute;
+  left: 0;
+}
+.service-card .brief-features {
+  flex-grow: 1;
+}
+.service-card .brief-features li {
+  font-size: 1.1rem;
+}
+.service-card .price {
+  color: #3393b0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 1.5rem 0;
+  font-family: "Sansation", sans-serif;
+}
+.service-card .price .price-small {
+  font-size: 0.9rem;
+  color: #fff;
+  font-weight: normal;
+}
+.service-card .card-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+}
+.service-card .card-actions button {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Sansation", sans-serif;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border: none;
+}
+.service-card .card-actions .view-details {
+  background: transparent;
+  color: #3393b0;
+  border: 2px solid #3393b0;
+}
+.service-card .card-actions .view-details:hover {
+  background: rgba(51, 147, 176, 0.1);
+}
+.service-card .card-actions .request-button {
+  background: #3393b0;
+  color: white;
+}
+.service-card .card-actions .request-button:hover {
+  background: #287288;
+}
+
+.secondary-services .service-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.secondary-services .service-card .brief-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.secondary-services .service-card .brief-content .brief-features {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+}
+
+/*----- Modal Styles -----*/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid rgba(93, 85, 85, 0.1);
+  width: 80%;
+  max-width: 600px;
+  border-radius: 15px;
+  position: relative;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+.modal-content .close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+}
+.modal-content .close:hover, .modal-content .close:focus {
+  color: #3393b0;
+  text-decoration: none;
+}
+.modal-content h2 {
+  font-family: "Audiowide", sans-serif;
+  font-size: 24px;
+  color: #3393b0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/*----- Form Styles -----*/
+.request-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-family: "Sansation", sans-serif;
+}
+.request-form input[type=text],
+.request-form input[type=email],
+.request-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  box-sizing: border-box;
+  background-color: #1f1f1f;
+  color: #e0e0e0;
+  font-family: "Sansation", sans-serif;
+}
+.request-form input[type=text]:focus,
+.request-form input[type=email]:focus,
+.request-form textarea:focus {
+  outline: none;
+  border-color: #3393b0;
+}
+.request-form textarea {
+  resize: vertical;
+}
+.request-form input[type=submit] {
+  background-color: #3393b0;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: "Sansation", sans-serif;
+  font-size: 16px;
+}
+.request-form input[type=submit]:hover {
+  background-color: #287288;
+}
+
+/*----- Expanded View Styles -----*/
+.expanded-view {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1001;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.expanded-content {
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+  max-width: 80%;
+  max-height: 80vh;
+  overflow-y: auto;
+  width: 700px;
+}
+
+.close-expanded {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #aaa;
+}
+.close-expanded:hover {
+  color: #3393b0;
+}
+
+.expanded-inner h2 {
+  font-family: "Audiowide", sans-serif;
+  font-size: 28px;
+  color: #3393b0;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.expanded-inner h3 {
+  font-family: "Sansation", sans-serif;
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.expanded-inner ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 25px 0;
+}
+.expanded-inner ul li {
+  font-family: "Sansation", sans-serif;
+  margin-bottom: 10px;
+  padding-left: 28px;
+  position: relative;
+  color: #e0e0e0;
+  font-size: 16px;
+  line-height: 1.4;
+}
+.expanded-inner ul li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #3393b0;
+  font-weight: bold;
+}
+.expanded-inner .price {
+  text-align: center;
+  font-family: "Audiowide", sans-serif;
+  font-size: 26px;
+  color: #3393b0;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.expanded-inner .price .price-small {
+  display: block;
+  font-family: "Sansation", sans-serif;
+  font-size: 14px;
+  color: #999;
+  margin-top: 5px;
+}
+.expanded-inner .details p {
+  margin-bottom: 10px;
+  color: #e0e0e0;
+  font-family: "Sansation", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .service-card {
+    width: 100%;
+    max-width: 400px;
+  }
+}
 @font-face {
   font-family: "Sansation";
   src: url("../fonts/sansation/Sansation_Light.ttf") format("truetype");
