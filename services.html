@@ -14,6 +14,11 @@
     />
     <link rel="stylesheet" href="scss/main.css" />
     <title>Services - Twin Logic Tech</title>
+    <meta name="description" content="Twin Logic Tech webbyrå - Tjänster inom webbutveckling, hosting och underhåll. Paket för alla storlekar av företag." />
+    <meta property="og:title" content="Services - Twin Logic Tech" />
+    <meta property="og:description" content="Webb­utvecklingspaket och IT-tjänster anpassade för ditt företag." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="sv_SE" />
   </head>
   <body>
     <!-- Header NavBar -->
@@ -30,243 +35,259 @@
         </div>
         <nav class="header__navigation">
           <ul>
-            <li><a href="index.html" class="header__nav-item">ABOUT US</a></li>
             <li>
-              <a href="services.html" class="header__nav-item">SERVICES</a>
+              <a href="index.html#about" class="header__nav-item" data-i18n="nav.about">ABOUT US</a>
             </li>
-            <li><a href="index.html" class="header__nav-item">PROJECTS</a></li>
-            <li><a href="index.html" class="header__nav-item">CONTACT</a></li>
+            <li>
+              <a href="services.html" class="header__nav-item" data-i18n="nav.services">SERVICES</a>
+            </li>
+            <li>
+              <a href="index.html" class="header__nav-item" data-i18n="nav.projects">PROJECTS</a>
+            </li>
+            <li>
+              <a href="index.html#contact" class="header__nav-item" data-i18n="nav.contact">CONTACT</a>
+            </li>
           </ul>
         </nav>
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')">EN</button>
+          <span class="lang-divider">|</span>
+          <button class="lang-btn" data-lang="sv" onclick="setLanguage('sv')">SV</button>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Öppna meny">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </section>
     </header>
 
     <main>
       <section class="main-packages">
-        <h2 class="section-title">Web Development Packages</h2>
+        <h2 class="section-title" data-i18n="svc.webDevTitle">Web Development Packages</h2>
         <div class="services-container primary-services">
+
+          <!-- Basic Package -->
           <div class="service-card">
             <div class="brief-content">
-              <h2>Basic Package</h2>
-              <h3>
+              <h2 data-i18n="svc.basicTitle">Basic Package</h2>
+              <h3 data-i18n="svc.basicSubtitle">
                 Perfect for small businesses starting their online journey
               </h3>
               <ul class="brief-features">
-                <li>Simple Website Design (WordPress)</li>
-                <li>Up to 5 Pages</li>
-                <li>Basic SEO Optimization</li>
-                <li>Contact Form</li>
-                <li>Mobile-Friendly Design</li>
+                <li data-i18n="svc.basic.f1">Simple Website Design (WordPress)</li>
+                <li data-i18n="svc.basic.f2">Up to 5 Pages</li>
+                <li data-i18n="svc.basic.f3">Basic SEO Optimization</li>
+                <li data-i18n="svc.basic.f4">Contact Form</li>
+                <li data-i18n="svc.basic.f5">Mobile-Friendly Design</li>
               </ul>
               <div class="price">
-                $500 - $1500s <span class="price-small">/ one-time</span>
+                €500 - €1,500 <span class="price-small">/ one-time</span>
               </div>
               <div class="card-actions">
-                <button class="view-details">View Details</button>
-                <button class="request-button">Request Service</button>
+                <button class="view-details" data-i18n="svc.viewDetails">View Details</button>
+                <button class="request-button" data-i18n="svc.requestService">Request Service</button>
               </div>
             </div>
             <div class="detailed-content">
-              <h2>Basic Package</h2>
-              <h4>Comprehensive Features:</h4>
+              <h2 data-i18n="svc.basicTitle">Basic Package</h2>
+              <h4 data-i18n="svc.basicDetailTitle">Comprehensive Features:</h4>
               <ul>
-                <li>
+                <li data-i18n="svc.basic.d1">
                   Simple Website Design (WordPress): We'll create a clean and
                   professional website using WordPress, a user-friendly
                   platform. This includes selecting a suitable theme and
                   customizing it with your branding (logo, colors, etc.). No
                   custom coding is included in this package.
                 </li>
-                <li>
+                <li data-i18n="svc.basic.d2">
                   Up to 5 Pages: This package covers the essential pages for a
                   basic online presence, such as Home, About Us, Services,
                   Contact, and a Blog (if desired). Additional pages can be
                   added at an extra cost.
                 </li>
-                <li>
+                <li data-i18n="svc.basic.d3">
                   Basic SEO Optimization: We'll optimize your website's content
                   and structure to improve its visibility in search engine
                   results (e.g., Google). This includes keyword research, meta
-                  tag optimization, and image alt text optimization. It does not
-                  include ongoing SEO services or advanced techniques.
+                  tag optimization, and image alt text optimization.
                 </li>
-                <li>
-                  Contact Form: A simple contact form will be included, allowing
-                  visitors to easily get in touch with you. This form will
-                  typically include fields for name, email, subject, and
-                  message. Spam protection (e.g., reCAPTCHA) will be included.
+                <li data-i18n="svc.basic.d4">
+                  Contact Form: A simple contact form will be included,
+                  allowing visitors to easily get in touch with you. Fields for
+                  name, email, subject, and message. Spam protection (e.g.,
+                  reCAPTCHA) will be included.
                 </li>
-                <li>
+                <li data-i18n="svc.basic.d5">
                   Mobile Responsive: Your website will be designed to adapt to
                   different screen sizes, ensuring a good user experience on
                   desktops, tablets, and smartphones.
                 </li>
               </ul>
               <div class="price">
-                $500 - $1500 <span class="price-small">/ one-time</span>
+                €500 - €1,500 <span class="price-small">/ one-time</span>
               </div>
               <div class="card-actions">
-                <button class="request-button">Request Service</button>
+                <button class="request-button" data-i18n="svc.requestService">Request Service</button>
               </div>
             </div>
           </div>
 
+          <!-- Standard Package -->
           <div class="service-card">
             <div class="brief-content">
-              <h2>Standard Package</h2>
-              <h3>Enhanced features for growing businesses</h3>
+              <h2 data-i18n="svc.standardTitle">Standard Package</h2>
+              <h3 data-i18n="svc.standardSubtitle">Enhanced features for growing businesses</h3>
               <ul class="brief-features">
-                <li>Custom Website Design (HTML, CSS, JS)</li>
-                <li>Up to 10 Pages</li>
-                <li>Advanced SEO Optimization</li>
-                <li>Content Management System (CMS)</li>
-                <li>Blog Setup</li>
-                <li>Social media links</li>
-                <li>Mobile-Friendly Design</li>
+                <li data-i18n="svc.standard.f1">Custom Website Design (HTML, CSS, JS)</li>
+                <li data-i18n="svc.standard.f2">Up to 10 Pages</li>
+                <li data-i18n="svc.standard.f3">Advanced SEO Optimization</li>
+                <li data-i18n="svc.standard.f4">Content Management System (CMS)</li>
+                <li data-i18n="svc.standard.f5">Blog Setup</li>
+                <li data-i18n="svc.standard.f6">Social media links</li>
+                <li data-i18n="svc.standard.f7">Mobile-Friendly Design</li>
               </ul>
               <div class="price">
-                $1500 - $5000 <span class="price-small">/ one-time</span>
+                €1,500 - €5,000 <span class="price-small">/ one-time</span>
               </div>
               <div class="card-actions">
-                <button class="view-details">View Details</button>
-                <button class="request-button">Request Service</button>
+                <button class="view-details" data-i18n="svc.viewDetails">View Details</button>
+                <button class="request-button" data-i18n="svc.requestService">Request Service</button>
               </div>
             </div>
             <div class="detailed-content">
-              <h2>Standard Package</h2>
-              <h4>Advanced Features:</h4>
+              <h2 data-i18n="svc.standardTitle">Standard Package</h2>
+              <h4 data-i18n="svc.standardDetailTitle">Advanced Features:</h4>
               <ul>
-                <li>
+                <li data-i18n="svc.standard.d1">
                   Custom Website Design (HTML, CSS, JS): We'll create a unique
                   website design tailored to your specific requirements, using
                   HTML, CSS, and JavaScript. This allows for greater flexibility
                   and customization compared to the Basic package.
                 </li>
-                <li>
+                <li data-i18n="svc.standard.d2">
                   Up to 10 Pages: This package allows for a more comprehensive
                   website, including additional pages for showcasing your
                   products, services, team, testimonials, or other relevant
                   information.
                 </li>
-                <li>
+                <li data-i18n="svc.standard.d3">
                   Advanced SEO Optimization: This includes more in-depth keyword
                   research, on-page optimization, and basic off-page
                   optimization (e.g., building some initial backlinks). It may
                   also include setting up Google Analytics and Google Search
                   Console.
                 </li>
-                <li>
+                <li data-i18n="svc.standard.d4">
                   Content Management System (CMS): We'll integrate a
-                  user-friendly CMS (likely still WordPress, but potentially
-                  others depending on your needs) that allows you to easily
-                  update and manage your website's content without needing to
-                  know code.
+                  user-friendly CMS that allows you to easily update and manage
+                  your website's content without needing to know code.
                 </li>
-                <li>
+                <li data-i18n="svc.standard.d5">
                   Social Media Integration: We'll integrate your website with
-                  your social media profiles (e.g., Facebook, Twitter, LinkedIn,
+                  your social media profiles (e.g., Facebook, X, LinkedIn,
                   Instagram). This may include social media sharing buttons,
                   embedded feeds, or links to your profiles.
                 </li>
-                <li>
+                <li data-i18n="svc.standard.d6">
                   Blog Setup: We'll set up a blog section on your website,
                   allowing you to publish articles, news, and updates. This is a
                   great way to improve your SEO and engage with your audience.
                 </li>
-                <li>
+                <li data-i18n="svc.standard.d7">
                   Mobile Responsive: Your website will be designed to adapt to
                   different screen sizes, ensuring a good user experience on
                   desktops, tablets, and smartphones.
                 </li>
               </ul>
               <div class="price">
-                $1500 - $5000 <span class="price-small">/ one-time</span>
+                €1,500 - €5,000 <span class="price-small">/ one-time</span>
               </div>
               <div class="card-actions">
-                <button class="request-button">Request Service</button>
+                <button class="request-button" data-i18n="svc.requestService">Request Service</button>
               </div>
             </div>
           </div>
 
+          <!-- Premium Package -->
           <div class="service-card">
             <div class="brief-content">
-              <h2>Premium Package</h2>
-              <h3>Complete solution for established businesses</h3>
+              <h2 data-i18n="svc.premiumTitle">Premium Package</h2>
+              <h3 data-i18n="svc.premiumSubtitle">Complete solution for established businesses</h3>
               <ul class="brief-features">
-                <li>Custom Web Application Development</li>
-                <li>Unlimited Pages</li>
-                <li>E-commerce Functionality</li>
-                <li>Advanced SEO & Marketing</li>
-                <li>Database Integration</li>
-                <li>Custom Features & Integrations</li>
-                <li>Priority Support</li>
-                <li>Mobile-Friendly Design</li>
+                <li data-i18n="svc.premium.f1">Custom Web Application Development</li>
+                <li data-i18n="svc.premium.f2">Unlimited Pages</li>
+                <li data-i18n="svc.premium.f3">E-commerce Functionality</li>
+                <li data-i18n="svc.premium.f4">Advanced SEO & Marketing</li>
+                <li data-i18n="svc.premium.f5">Database Integration</li>
+                <li data-i18n="svc.premium.f6">Custom Features & Integrations</li>
+                <li data-i18n="svc.premium.f7">Priority Support</li>
+                <li data-i18n="svc.premium.f8">Mobile-Friendly Design</li>
               </ul>
               <div class="price">
-                $5000+ <span class="price-small">/ one-time</span>
+                €5,000+ <span class="price-small">/ one-time</span>
               </div>
               <div class="card-actions">
-                <button class="view-details">View Details</button>
-                <button class="request-button">Request Service</button>
+                <button class="view-details" data-i18n="svc.viewDetails">View Details</button>
+                <button class="request-button" data-i18n="svc.requestService">Request Service</button>
               </div>
             </div>
             <div class="detailed-content">
-              <h2>Premium Package</h2>
-              <h4>Premium Features:</h4>
+              <h2 data-i18n="svc.premiumTitle">Premium Package</h2>
+              <h4 data-i18n="svc.premiumDetailTitle">Premium Features:</h4>
               <ul>
-                <li>
+                <li data-i18n="svc.premium.d1">
                   Custom Web Application Development: This package is for
                   businesses that need more than just a website. We'll build a
                   custom web application tailored to your specific needs, which
                   could include features like user accounts, custom dashboards,
                   complex data processing, and more.
                 </li>
-                <li>
+                <li data-i18n="svc.premium.d2">
                   Unlimited Pages: There's no limit to the number of pages your
                   web application can have.
                 </li>
-                <li>
+                <li data-i18n="svc.premium.d3">
                   E-commerce Functionality: We'll integrate a full-featured
                   e-commerce platform (e.g., WooCommerce, Shopify, or a custom
-                  solution) into your web application, allowing you to sell
-                  products or services online. This includes features like
-                  product catalogs, shopping carts, payment gateway integration,
-                  and order management.
+                  solution) allowing you to sell products or services online.
+                  Includes product catalogs, shopping carts, payment gateway
+                  integration, and order management.
                 </li>
-                <li>
+                <li data-i18n="svc.premium.d4">
                   Advanced SEO & Marketing: This includes a comprehensive SEO
                   strategy, ongoing optimization, and potentially other digital
                   marketing services (e.g., pay-per-click advertising, social
                   media marketing).
                 </li>
-                <li>
+                <li data-i18n="svc.premium.d5">
                   Database Integration: We'll integrate your web application
                   with a database (e.g., MySQL, PostgreSQL, MongoDB) to store
                   and manage your data efficiently and securely.
                 </li>
-                <li>
+                <li data-i18n="svc.premium.d6">
                   Custom Features & Integrations: We can develop custom features
                   and integrate your web application with third-party services
                   (e.g., CRM, email marketing platforms, accounting software) to
                   meet your specific business requirements.
                 </li>
-                <li>
+                <li data-i18n="svc.premium.d7">
                   Priority Support: You'll receive priority support and
                   maintenance to ensure your web application runs smoothly and
                   efficiently. This may include faster response times, dedicated
                   support staff, and proactive monitoring.
                 </li>
-                <li>
+                <li data-i18n="svc.premium.d8">
                   Mobile Responsive: Your website will be designed to adapt to
                   different screen sizes, ensuring a good user experience on
                   desktops, tablets, and smartphones.
                 </li>
               </ul>
               <div class="price">
-                $5000+ <span class="price-small">/ one-time</span>
+                €5,000+ <span class="price-small">/ one-time</span>
               </div>
               <div class="card-actions">
-                <button class="request-button">Request Service</button>
+                <button class="request-button" data-i18n="svc.requestService">Request Service</button>
               </div>
             </div>
           </div>
@@ -276,131 +297,135 @@
       <!----- Additional Services ----->
 
       <section class="additional-services">
-        <h2 class="section-title">Additional Services</h2>
+        <h2 class="section-title" data-i18n="svc.additionalTitle">Additional Services</h2>
         <div class="services-container secondary-services">
+
+          <!-- Hosting -->
           <div class="service-card">
             <div class="brief-content">
-              <h2>Hosting Services</h2>
-              <h3>Reliable and secure web hosting</h3>
+              <h2 data-i18n="svc.hostingTitle">Hosting Services</h2>
+              <h3 data-i18n="svc.hostingSubtitle">Reliable and secure web hosting</h3>
               <ul class="brief-features">
-                <li>99.9% uptime guarantee</li>
-                <li>Daily backups</li>
-                <li>SSL certificate included</li>
-                <li>24/7 monitoring</li>
+                <li data-i18n="svc.hosting.f1">99.9% uptime guarantee</li>
+                <li data-i18n="svc.hosting.f2">Daily backups</li>
+                <li data-i18n="svc.hosting.f3">SSL certificate included</li>
+                <li data-i18n="svc.hosting.f4">24/7 monitoring</li>
               </ul>
               <div class="price">
-                $29 <span class="price-small">/ month</span>
+                €29 <span class="price-small">/ month</span>
               </div>
               <div class="card-actions">
-                <button class="view-details">View Details</button>
-                <button class="request-button">Request Service</button>
+                <button class="view-details" data-i18n="svc.viewDetails">View Details</button>
+                <button class="request-button" data-i18n="svc.requestService">Request Service</button>
               </div>
             </div>
             <div class="detailed-content">
-              <h2>Hosting Services</h2>
-              <h4>Hosting Features:</h4>
+              <h2 data-i18n="svc.hostingTitle">Hosting Services</h2>
+              <h4 data-i18n="svc.hostingDetailTitle">Hosting Features:</h4>
               <ul>
-                <li>High-performance servers</li>
-                <li>99.9% uptime guarantee</li>
-                <li>Daily automated backups</li>
-                <li>Free SSL certificate</li>
-                <li>24/7 server monitoring</li>
-                <li>DDoS protection</li>
-                <li>Email hosting</li>
-                <li>Unlimited bandwidth</li>
-                <li>Regular security updates</li>
-                <li>Technical support</li>
+                <li data-i18n="svc.hosting.d1">High-performance servers</li>
+                <li data-i18n="svc.hosting.d2">99.9% uptime guarantee</li>
+                <li data-i18n="svc.hosting.d3">Daily automated backups</li>
+                <li data-i18n="svc.hosting.d4">Free SSL certificate</li>
+                <li data-i18n="svc.hosting.d5">24/7 server monitoring</li>
+                <li data-i18n="svc.hosting.d6">DDoS protection</li>
+                <li data-i18n="svc.hosting.d7">Email hosting</li>
+                <li data-i18n="svc.hosting.d8">Unlimited bandwidth</li>
+                <li data-i18n="svc.hosting.d9">Regular security updates</li>
+                <li data-i18n="svc.hosting.d10">Technical support</li>
               </ul>
               <div class="price">
-                $29 <span class="price-small">/ month</span>
+                €29 <span class="price-small">/ month</span>
               </div>
               <div class="card-actions">
-                <button class="request-button">Request Service</button>
+                <button class="request-button" data-i18n="svc.requestService">Request Service</button>
               </div>
             </div>
           </div>
 
+          <!-- Maintenance -->
           <div class="service-card">
             <div class="brief-content">
-              <h2>Maintenance Package</h2>
-              <h3>Professional website maintenance and support</h3>
+              <h2 data-i18n="svc.maintenanceTitle">Maintenance Package</h2>
+              <h3 data-i18n="svc.maintenanceSubtitle">Professional website maintenance and support</h3>
               <ul class="brief-features">
-                <li>Regular software updates</li>
-                <li>Security monitoring and fixes</li>
-                <li>Performance optimization</li>
-                <li>Content updates & backups</li>
-                <li>24/7 technical support</li>
+                <li data-i18n="svc.maintenance.f1">Regular software updates</li>
+                <li data-i18n="svc.maintenance.f2">Security monitoring and fixes</li>
+                <li data-i18n="svc.maintenance.f3">Performance optimization</li>
+                <li data-i18n="svc.maintenance.f4">Content updates & backups</li>
+                <li data-i18n="svc.maintenance.f5">24/7 technical support</li>
               </ul>
               <div class="price">
-                $99 <span class="price-small">/ month</span>
+                €99 <span class="price-small">/ month</span>
               </div>
               <div class="card-actions">
-                <button class="view-details">View Details</button>
-                <button class="request-button">Request Service</button>
+                <button class="view-details" data-i18n="svc.viewDetails">View Details</button>
+                <button class="request-button" data-i18n="svc.requestService">Request Service</button>
               </div>
             </div>
             <div class="detailed-content">
-              <h2>Maintenance Package</h2>
-              <h4>Maintenance Features:</h4>
+              <h2 data-i18n="svc.maintenanceTitle">Maintenance Package</h2>
+              <h4 data-i18n="svc.maintenanceDetailTitle">Maintenance Features:</h4>
               <ul>
-                <li>Regular software updates</li>
-                <li>Security monitoring and fixes</li>
-                <li>Performance optimization</li>
-                <li>Content updates</li>
-                <li>Technical support</li>
-                <li>Monthly reports</li>
-                <li>Database optimization</li>
-                <li>Backup management</li>
-                <li>SEO monitoring</li>
-                <li>Emergency support</li>
+                <li data-i18n="svc.maintenance.d1">Regular software updates</li>
+                <li data-i18n="svc.maintenance.d2">Security monitoring and fixes</li>
+                <li data-i18n="svc.maintenance.d3">Performance optimization</li>
+                <li data-i18n="svc.maintenance.d4">Content updates</li>
+                <li data-i18n="svc.maintenance.d5">Technical support</li>
+                <li data-i18n="svc.maintenance.d6">Monthly reports</li>
+                <li data-i18n="svc.maintenance.d7">Database optimization</li>
+                <li data-i18n="svc.maintenance.d8">Backup management</li>
+                <li data-i18n="svc.maintenance.d9">SEO monitoring</li>
+                <li data-i18n="svc.maintenance.d10">Emergency support</li>
               </ul>
               <div class="price">
-                $99 <span class="price-small">/ month</span>
+                €99 <span class="price-small">/ month</span>
               </div>
               <div class="card-actions">
-                <button class="request-button">Request Service</button>
+                <button class="request-button" data-i18n="svc.requestService">Request Service</button>
               </div>
             </div>
           </div>
 
+          <!-- SEO -->
           <div class="service-card">
             <div class="brief-content">
-              <h2>SEO Services</h2>
-              <h3>Improve your online visibility</h3>
+              <h2 data-i18n="svc.seoTitle">SEO Services</h2>
+              <h3 data-i18n="svc.seoSubtitle">Improve your online visibility</h3>
               <ul class="brief-features">
-                <li>Keyword optimization</li>
-                <li>Content strategy</li>
-                <li>Performance tracking</li>
-                <li>Monthly reporting</li>
+                <li data-i18n="svc.seo.f1">Keyword optimization</li>
+                <li data-i18n="svc.seo.f2">Content strategy</li>
+                <li data-i18n="svc.seo.f3">Performance tracking</li>
+                <li data-i18n="svc.seo.f4">Monthly reporting</li>
               </ul>
               <div class="price">
-                $499 <span class="price-small">/ month</span>
+                €499 <span class="price-small">/ month</span>
               </div>
               <div class="card-actions">
-                <button class="view-details">View Details</button>
-                <button class="request-button">Request Service</button>
+                <button class="view-details" data-i18n="svc.viewDetails">View Details</button>
+                <button class="request-button" data-i18n="svc.requestService">Request Service</button>
               </div>
             </div>
             <div class="detailed-content">
-              <h2>SEO Services</h2>
-              <h4>SEO Features:</h4>
+              <h2 data-i18n="svc.seoTitle">SEO Services</h2>
+              <h4 data-i18n="svc.seoDetailTitle">SEO Features:</h4>
               <ul>
-                <li>Keyword research and optimization</li>
-                <li>Content strategy development</li>
-                <li>On-page SEO optimization</li>
-                <li>Technical SEO audit</li>
-                <li>Link building</li>
-                <li>Local SEO optimization</li>
-                <li>Performance tracking</li>
-                <li>Competitor analysis</li>
-                <li>Monthly reporting</li>
-                <li>Strategy adjustments</li>
+                <li data-i18n="svc.seo.d1">Keyword research and optimization</li>
+                <li data-i18n="svc.seo.d2">Content strategy development</li>
+                <li data-i18n="svc.seo.d3">On-page SEO optimization</li>
+                <li data-i18n="svc.seo.d4">Technical SEO audit</li>
+                <li data-i18n="svc.seo.d5">Link building</li>
+                <li data-i18n="svc.seo.d6">Local SEO optimization</li>
+                <li data-i18n="svc.seo.d7">Performance tracking</li>
+                <li data-i18n="svc.seo.d8">Competitor analysis</li>
+                <li data-i18n="svc.seo.d9">Monthly reporting</li>
+                <li data-i18n="svc.seo.d10">Strategy adjustments</li>
               </ul>
               <div class="price">
-                $499 <span class="price-small">/ month</span>
+                €499 <span class="price-small">/ month</span>
               </div>
               <div class="card-actions">
-                <button class="request-button">Request Service</button>
+                <button class="request-button" data-i18n="svc.requestService">Request Service</button>
               </div>
             </div>
           </div>
@@ -424,21 +449,21 @@
     <div id="requestModal" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
-        <h2>Request Service</h2>
+        <h2 data-i18n="modal.title">Request Service</h2>
         <form id="requestForm" class="request-form">
-          <label for="serviceType">Service:</label>
+          <label for="serviceType" data-i18n="modal.serviceLabel">Service:</label>
           <input type="text" id="serviceType" name="serviceType" readonly />
 
-          <label for="name">Name:</label>
+          <label for="name" data-i18n="modal.nameLabel">Name:</label>
           <input type="text" id="name" name="name" required />
 
-          <label for="email">Email:</label>
+          <label for="email" data-i18n="modal.emailLabel">Email:</label>
           <input type="email" id="email" name="email" required />
 
-          <label for="message">Message (Optional):</label>
+          <label for="message" data-i18n="modal.messageLabel">Message (Optional):</label>
           <textarea id="message" name="message"></textarea>
 
-          <input type="submit" value="Submit Request" />
+          <input type="submit" data-i18n="modal.submit" value="Submit Request" />
         </form>
       </div>
     </div>
@@ -462,11 +487,15 @@
 
       <div class="copyright">
         <img src="img/copyright.svg" alt="Copyright" class="copyright-icon" />
-        <span class="twin-logic-tech"
-          >2024 Twin Logic Tech. All rights reserved, UX/UI Elin Bradway</span
+        <span class="twin-logic-tech" data-i18n="footer.copyright"
+          >2025 Twin Logic Tech. All rights reserved, UX/UI Elin Bradway</span
         >
       </div>
     </footer>
+
+    <script src="Javascript/translations.js"></script>
+    <script src="Javascript/i18n.js"></script>
+    <script src="Javascript/main.js"></script>
     <script src="Javascript/script-service.js"></script>
   </body>
 </html>

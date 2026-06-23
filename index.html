@@ -12,9 +12,13 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Sansation:wght@300;400&display=swap"
     />
-    <!-- <link rel="stylesheet" href="style/normalize.css" /> -->
     <link rel="stylesheet" href="scss/main.css" />
     <title>Twin Logic Tech</title>
+    <meta name="description" content="Twin Logic Tech - Innovative IT solutions including web development, cybersecurity, and backend solutions. Based in Helsingborg, Sweden." />
+    <meta property="og:title" content="Twin Logic Tech" />
+    <meta property="og:description" content="Innovative IT solutions to drive your business forward." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="sv_SE" />
   </head>
   <body>
     <!----- Header NavBar ----->
@@ -31,14 +35,30 @@
         </div>
         <nav class="header__navigation">
           <ul>
-            <li class="header__nav-item">ABOUT US</li>
             <li>
-              <a href="services.html" class="header__nav-item">SERVICES</a>
+              <a href="#about" class="header__nav-item" data-i18n="nav.about">ABOUT US</a>
             </li>
-            <li class="header__nav-item">PROJECTS</li>
-            <li class="header__nav-item">CONTACT</li>
+            <li>
+              <a href="services.html" class="header__nav-item" data-i18n="nav.services">SERVICES</a>
+            </li>
+            <li>
+              <a href="#" class="header__nav-item" data-i18n="nav.projects">PROJECTS</a>
+            </li>
+            <li>
+              <a href="#contact" class="header__nav-item" data-i18n="nav.contact">CONTACT</a>
+            </li>
           </ul>
         </nav>
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')">EN</button>
+          <span class="lang-divider">|</span>
+          <button class="lang-btn" data-lang="sv" onclick="setLanguage('sv')">SV</button>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Öppna meny">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </section>
     </header>
 
@@ -56,12 +76,12 @@
           <div class="hero__video-overlay4"></div>
         </div>
         <div class="hero__content-wrapper">
-          <h1 class="hero__welcome">Welcome to Twin Logic Tech</h1>
-          <p class="hero__subtext">
+          <h1 class="hero__welcome" data-i18n="hero.welcome">Welcome to Twin Logic Tech</h1>
+          <p class="hero__subtext" data-i18n="hero.subtext">
             Innovative Solutions to Drive Your Business Forward.
           </p>
-          <button class="hero__cta">
-            <span class="hero__cta-text">Learn more</span>
+          <button class="hero__cta" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
+            <span class="hero__cta-text" data-i18n="hero.cta">Learn more</span>
           </button>
         </div>
       </section>
@@ -79,8 +99,8 @@
             alt="Tree structure Icon"
             src="img/TreeStructure.svg"
           />
-          <p class="services__card-title">Backend solutions</p>
-          <p class="services__card-status">coming soon..</p>
+          <p class="services__card-title" data-i18n="home.backend">Backend solutions</p>
+          <p class="services__card-status" data-i18n="home.comingSoon">coming soon..</p>
         </div>
         <div class="services__card">
           <img
@@ -88,12 +108,12 @@
             alt="Git Diff Icon"
             src="img/GitDiff.svg"
           />
-          <p class="services__card-title">Front-end development</p>
-          <p class="services__card-description">
+          <p class="services__card-title" data-i18n="home.frontend">Front-end development</p>
+          <p class="services__card-description" data-i18n="home.frontendDesc">
             Need a sleek, responsive website? Our front-end development services
             ensure your site looks great and works flawlessly on all devices.
           </p>
-          <p><b>Let's build something amazing together!</b></p>
+          <p><b data-i18n="home.frontendCta">Let's build something amazing together!</b></p>
         </div>
         <div class="services__card">
           <img
@@ -101,19 +121,19 @@
             alt="Biohazard Icon"
             src="img/Biohazard.svg"
           />
-          <p class="services__card-title">Cyber security</p>
-          <p class="services__card-status">coming soon..</p>
+          <p class="services__card-title" data-i18n="home.cyber">Cyber security</p>
+          <p class="services__card-status" data-i18n="home.comingSoon">coming soon..</p>
         </div>
       </section>
 
       <!----- What We Do Section ----->
-      <section class="about">
+      <section class="about" id="about">
         <div class="what-we-do-container">
-          <span>What</span>
-          <span class="we-do"> we do</span>
+          <span data-i18n="about.what1">What</span>
+          <span class="we-do" data-i18n="about.what2"> we do</span>
         </div>
         <div class="about-card-1">
-          <p class="about-card-1__text">
+          <p class="about-card-1__text" data-i18n="about.text">
             Twin Logic Tech was founded by two IT enthusiasts from an IT program
             in Helsingborg, Sweden, with a clear vision: to create a company
             that attracts talented collaborators and engages dynamic clients.
@@ -127,20 +147,19 @@
         </div>
       </section>
 
-      <!----- About Us Section ----->
       <!----- Who We Are Section ----->
-      <section class="team">
+      <section class="team" id="team">
         <div class="what-we-do-container">
-          <span>Who</span>
-          <span class="we-do"> we are</span>
+          <span data-i18n="team.who1">Who</span>
+          <span class="we-do" data-i18n="team.who2"> we are</span>
         </div>
 
         <!----- Peter's Card ----->
         <div class="about-card-1">
           <div class="about-card-1__text">
             <h3 class="about-card-1__name">Peter Gustafsson</h3>
-            <p class="about-card-1__role">Co-founder & Developer</p>
-            <p class="about-card-1__description">
+            <p class="about-card-1__role" data-i18n="team.peterRole">Co-founder & Developer</p>
+            <p class="about-card-1__description" data-i18n="team.peterDesc">
               I'm Peter Gustafsson, a passionate tech enthusiast born in 1985
               and a proud family man. After years in traditional roles, I
               pursued my passion for technology, focusing on front-end
@@ -158,8 +177,8 @@
         <div class="about-card-1 about-card-1--reversed">
           <div class="about-card-1__text">
             <h3 class="about-card-1__name">Simon Tunje</h3>
-            <p class="about-card-1__role">Co-founder & Developer</p>
-            <p class="about-card-1__description">
+            <p class="about-card-1__role" data-i18n="team.simonRole">Co-founder & Developer</p>
+            <p class="about-card-1__description" data-i18n="team.simonDesc">
               I'm Simon Tunje, and my passion for programming has opened a new
               chapter in my life. I previously worked as a youth recreational
               leader across Sweden, mentoring young people, and led scouts on
@@ -174,32 +193,28 @@
       </section>
 
       <!----- Contact Section ----->
-      <section class="contact-section">
+      <section class="contact-section" id="contact">
         <div class="contact-title-container">
-          <span>Let's Get in</span>
-          <span class="touch"> Touch!</span>
+          <span data-i18n="contact.title1">Let's Get in</span>
+          <span class="touch" data-i18n="contact.title2"> Touch!</span>
         </div>
         <div class="contact-section__content">
           <!----- Left Side ----->
           <div class="contact-section-text">
             <div class="contact-info-wrapper">
-              <p class="got-a-question-container">
+              <p
+                class="got-a-question-container"
+                data-i18n="contact.question"
+                data-i18n-html
+              >
                 Got a question or need a hand?<br />
-                Reach out to us by email, phone, or<br />
+                Reach out to us by email or<br />
                 through our contact form.<br /><br />
                 We're excited to help!
               </p>
               <div class="group-child"></div>
 
-              <div class="cantact-info">
-                <div class="contact-item">
-                  <img
-                    src="img/ic_baseline-phone.svg"
-                    alt=""
-                    class="icbaseline-phone-icon"
-                  />
-                  <span class="blablabla">+46blablabla</span>
-                </div>
+              <div class="contact-info">
                 <div class="contact-item">
                   <img
                     src="img/ic_baseline-email.svg"
@@ -231,26 +246,30 @@
 
           <!----- Right Side - Contact Form ----->
           <div class="contact-form">
-            <div class="form-wrapper">
+            <form class="form-wrapper" action="https://formsubmit.co/info@twinlogic-tech.se" method="POST">
+              <input type="hidden" name="_subject" value="Ny kontakt via hemsidan" />
+              <input type="hidden" name="_next" value="https://twinlogic-tech.se" />
+              <input type="hidden" name="_captcha" value="false" />
+
               <div class="form-group">
-                <label class="full-name">Full Name</label>
-                <input type="text" class="contact-form-child" required />
+                <label class="full-name" data-i18n="contact.fullName">Full Name</label>
+                <input type="text" name="name" class="contact-form-child" required />
               </div>
 
               <div class="form-group">
-                <label class="email">Email</label>
-                <input type="email" class="contact-form-item" required />
+                <label class="email" data-i18n="contact.emailLabel">Email</label>
+                <input type="email" name="email" class="contact-form-item" required />
               </div>
 
               <div class="form-group">
-                <label class="message">Message</label>
-                <textarea class="contact-form-inner" required></textarea>
+                <label class="message" data-i18n="contact.message">Message</label>
+                <textarea name="message" class="contact-form-inner" required></textarea>
               </div>
 
               <button type="submit" class="lets-go-wrapper">
-                <span class="lets-go">Let's go!</span>
+                <span class="lets-go" data-i18n="contact.submit">Let's go!</span>
               </button>
-            </div>
+            </form>
           </div>
         </div>
       </section>
@@ -275,20 +294,24 @@
 
       <div class="copyright">
         <img src="img/copyright.svg" alt="Copyright" class="copyright-icon" />
-        <span class="twin-logic-tech"
-          >2024 Twin Logic Tech. All rights reserved, UX/UI Elin Bradway</span
+        <span class="twin-logic-tech" data-i18n="footer.copyright"
+          >2025 Twin Logic Tech. All rights reserved, UX/UI Elin Bradway</span
         >
       </div>
     </footer>
 
     <!----- Floating Button ----->
-    <div class="floating-button" id="floatingButtonContainer">
-      <p class="floating-button__text">Get in touch</p>
+    <a class="floating-button" href="#contact">
+      <p class="floating-button__text" data-i18n="floating.text">Get in touch</p>
       <img
         class="floating-button__icon"
         alt="Caret Right Icon"
         src="img/CaretRight.svg"
       />
-    </div>
+    </a>
+
+    <script src="Javascript/translations.js"></script>
+    <script src="Javascript/i18n.js"></script>
+    <script src="Javascript/main.js"></script>
   </body>
 </html>
