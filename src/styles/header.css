@@ -1,0 +1,207 @@
+/* header: navbar, logo lockup, nav links, language switcher, hamburger */
+/* Ported from scss/main.css (line ranges noted). Keep file import order: see src/app/layout.tsx */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  padding: 12px 16px;
+  background: rgba(0, 0, 0, 0.92);
+  backdrop-filter: blur(8px);
+}
+.header__navbar {
+  /*  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 0;
+}
+.header__logo {
+  display: flex;
+  align-items: center;
+}
+.header__logo img {
+  width: 60px;
+  height: auto;
+  margin-right: 8px;
+}
+.header__logo p {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  background: linear-gradient(90deg, var(--clr-primary), var(--clr-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.header__navigation ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  padding: 16px 0;
+}
+.header__navigation li {
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 12px;
+  letter-spacing: 0.11em;
+  color: var(--clr-text);
+  padding: 4px 8px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+.header__navigation li a {
+  color: inherit;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: inherit;
+  letter-spacing: inherit;
+}
+.header__navigation li:hover {
+  color: var(--clr-primary);
+  transform: scale(1.05);
+}
+.header__navigation li:hover::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--clr-primary);
+  animation: underline 0.3s ease;
+}
+
+.lang-btn:focus-visible,
+.hamburger:focus-visible {
+  outline: 2px solid var(--clr-primary);
+  outline-offset: 3px;
+}
+
+/* Language switcher */
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-left: 16px;
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.4);
+  font-family: var(--font-body);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  padding: 4px 6px;
+  transition: color 0.3s ease;
+  border-radius: 4px;
+}
+
+.lang-btn:hover,
+.lang-btn.active {
+  color: var(--clr-primary);
+}
+
+.lang-divider {
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 12px;
+  user-select: none;
+}
+
+/* Active nav link */
+.header__navigation li.active {
+  color: var(--clr-primary);
+}
+.header__navigation li.active::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--clr-primary);
+}
+
+/* Hamburger button */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 101;
+}
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--clr-text);
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* =====================
+   LOGO LOCKUP
+   ===================== */
+.header__logo {
+  gap: 10px;
+  min-width: 0;
+  text-decoration: none;
+}
+.header__logo img {
+  margin-right: 0;
+  flex-shrink: 0;
+}
+.header__logo-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3px;
+  min-width: 0;
+}
+.header__logo-text p {
+  font-family: var(--font-heading);
+  font-size: 30px;
+  line-height: 1;
+  letter-spacing: 0.06em;
+  background: linear-gradient(90deg, var(--clr-primary), var(--clr-secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.header__logo-tagline {
+  font-family: var(--font-body);
+  font-size: 10px;
+  line-height: 1.2;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  white-space: nowrap;
+}
+.header__navigation li a {
+  display: inline-block;
+}
+
+.lang-btn {
+  min-width: 36px;
+  min-height: 36px;
+}

@@ -1,0 +1,52 @@
+/* base: reset, design tokens, html/body, main. Fonts are loaded with next/font (see src/app/layout.tsx) */
+/* Ported from scss/main.css (line ranges noted). Keep file import order: see src/app/layout.tsx */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Varumärkesfärger */
+  --clr-primary: #45b4d6;
+  --clr-secondary: #3393b0;
+  --clr-secondary-hover: #287288;
+  --clr-dark: #163e4a;
+  --clr-bg: #000;
+  --clr-text: rgba(255, 255, 255, 0.7);
+
+  /* Typsnitt */
+  --font-heading: var(--font-audiowide), "Audiowide", sans-serif;
+  --font-body: var(--font-sansation), "Sansation", sans-serif;
+  --font-body-light: var(--font-sansation-light), "Sansation Light", "Sansation", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  margin: 0;
+  line-height: normal;
+  background-color: #000;
+  color: var(--clr-text);
+  font-family: var(--font-heading);
+}
+
+main {
+  padding: 2rem;
+}
+
+/* Swedish stored in localStorage: hide the English static text until the language is applied.
+   The animation reveals it after 1.5s even if JavaScript fails. */
+html.i18n-pending body {
+  visibility: hidden;
+  animation: i18n-reveal 0s linear 1.5s forwards;
+}
+@keyframes i18n-reveal {
+  to {
+    visibility: visible;
+  }
+}

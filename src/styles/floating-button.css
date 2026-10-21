@@ -1,0 +1,40 @@
+/* floating 'Get in touch' button */
+/* Ported from scss/main.css. Keep file import order: see src/app/layout.tsx */
+
+.floating-button {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  background: linear-gradient(90deg, var(--clr-primary), var(--clr-dark));
+  border-radius: 16px;
+  padding: 8px 16px;
+  color: var(--clr-text);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.3s ease;
+}
+.floating-button:hover {
+  background: #2a9bbe;
+}
+.floating-button img {
+  width: 16px;
+  height: 16px;
+}
+
+/* Make floating button work as anchor */
+a.floating-button {
+  text-decoration: none;
+}
+
+/* Floating button / language switcher polish */
+.floating-button {
+  z-index: 90;
+  min-height: 44px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+.floating-button p {
+  font-family: var(--font-body);
+  color: #fff;
+}

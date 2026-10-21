@@ -1,0 +1,186 @@
+/* contact section (info card + formsubmit form) */
+/* Ported from scss/main.css. Keep file import order: see src/app/layout.tsx */
+
+.contact-section {
+  width: 100%;
+  position: relative;
+  min-height: 509px;
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+  font-family: var(--font-body-light);
+  background-color: #000;
+}
+.contact-section .contact-title-container {
+  width: auto;
+  text-align: center;
+  font-size: 32px;
+  font-family: var(--font-heading);
+  margin: 0 auto 40px;
+  padding-top: 40px;
+}
+.contact-section .contact-title-container .touch {
+  background: linear-gradient(90deg, var(--clr-secondary), var(--clr-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.contact-section__content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.contact-section-text {
+  flex: 1;
+  max-width: 335px;
+  background-color: rgba(175, 179, 255, 0);
+  border: 1px solid rgba(93, 81, 68, 0.75);
+  border-radius: 15px;
+  padding: 40px;
+  text-align: left;
+}
+
+.contact-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 20px;
+}
+
+.got-a-question-container {
+  line-height: 23px;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.group-child {
+  width: 100%;
+  border-top: 1px solid rgba(93, 81, 68, 0.75);
+  margin: 10px 0;
+}
+
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+
+.infotwinlogic-techse {
+  color: inherit;
+  text-decoration: underline;
+  font-weight: 300;
+}
+
+.storgatan-54-67-container {
+  font-weight: 300;
+  width: 190px;
+}
+.storgatan-54-67-container .helsingborg {
+  margin: 0;
+}
+
+.icbaseline-email-icon,
+.mdiaddress-marker-icon {
+  width: 25px;
+  height: 25px;
+  overflow: hidden;
+}
+
+.tinted-logo-icon {
+  position: static;
+  width: 200px;
+  height: 200px;
+  margin-top: auto;
+  align-self: center;
+}
+
+.contact-form {
+  flex: 1;
+  max-width: 448px;
+  background-color: rgba(175, 179, 255, 0);
+  border: 1px solid rgba(93, 81, 68, 0.75);
+  border-radius: 15px;
+  padding: 40px;
+}
+
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 24px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+.form-group label {
+  position: static;
+  font-weight: 300;
+}
+
+.contact-form-child,
+.contact-form-item,
+.contact-form-inner {
+  width: 100%;
+  background-color: rgba(175, 179, 255, 0);
+  border: 1px solid rgba(93, 81, 68, 0.75);
+  padding: 10px;
+}
+
+.contact-form-child,
+.contact-form-item {
+  height: 45px;
+  border-radius: 10px;
+}
+
+.contact-form-inner {
+  height: 215px;
+  border-radius: 15px;
+  resize: none;
+}
+
+.full-name,
+.email,
+.message {
+  position: static;
+  width: auto;
+  height: auto;
+}
+
+.lets-go-wrapper {
+  align-self: flex-end;
+  border-radius: 12px;
+  background: linear-gradient(90deg, rgba(49, 140, 168, 0.75), rgba(22, 62, 74, 0.75));
+  width: 172px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-family: var(--font-body);
+  margin-top: auto;
+}
+
+/* Fix contact-info class (was cantact-info) */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Contact form input colors */
+.contact-form-child,
+.contact-form-item,
+.contact-form-inner {
+  color: var(--clr-text);
+}

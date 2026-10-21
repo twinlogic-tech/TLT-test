@@ -1,25 +1,24 @@
 {
-  "name": "tlt-test",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "tlt-website",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass scss/main.scss css/main.css --watch"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/twinlogic-tech/TLT-test.git"
+  "dependencies": {
+    "next": "16.4.2",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/twinlogic-tech/TLT-test/issues"
-  },
-  "homepage": "https://github.com/twinlogic-tech/TLT-test#readme",
   "devDependencies": {
-    "sass": "^1.84.0"
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.2",
+    "typescript": "^5"
   }
 }

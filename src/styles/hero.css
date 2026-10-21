@@ -1,0 +1,111 @@
+/* hero (video) and the shared CTA button (also used by .consulting__cta) */
+/* Ported from scss/main.css (line ranges noted). Keep file import order: see src/app/layout.tsx */
+
+.hero {
+  width: 100%;
+  position: relative;
+  min-height: clamp(600px, 85vh, 780px);
+  display: flex;
+  align-items: center;
+  text-align: left;
+  color: var(--clr-text);
+  font-family: var(--font-heading);
+  overflow: hidden;
+  isolation: isolate;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0) 28%),
+    linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 18%),
+    linear-gradient(270deg, #000 0%, rgba(0, 0, 0, 0) 12%),
+    linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0.78) 40%, rgba(0, 0, 0, 0.25) 100%);
+}
+.hero__content-wrapper {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 24px 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+.hero__video {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+.hero__video video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7;
+}
+.hero__video-overlay1,
+.hero__video-overlay2,
+.hero__video-overlay3,
+.hero__video-overlay4 {
+  display: none;
+}
+.hero__welcome {
+  font-size: clamp(1.55rem, 6.4vw, 3.75rem);
+  line-height: 1.15;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  padding-bottom: 0.08em;
+  background: linear-gradient(90deg, var(--clr-primary), var(--clr-secondary) 80%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero__subtext {
+  font-size: clamp(1.05rem, 2vw, 1.5rem);
+  line-height: 1.5;
+  max-width: 540px;
+  font-family: var(--font-body-light);
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.82);
+}
+.hero__cta,
+.consulting__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 10px 36px;
+  border-radius: 20px;
+  background: linear-gradient(90deg, rgba(51, 147, 176, 0.45), rgba(18, 20, 21, 0.45));
+  border: 2px solid rgba(69, 180, 214, 0.45);
+  box-sizing: border-box;
+  font-size: 1.25rem;
+  font-family: var(--font-body);
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.hero__cta:hover,
+.consulting__cta:hover {
+  background: linear-gradient(90deg, rgba(51, 147, 176, 0.75), rgba(18, 20, 21, 0.6));
+  border-color: var(--clr-primary);
+  box-shadow: 0 6px 24px rgba(69, 180, 214, 0.25);
+  transform: translateY(-2px);
+}
+.hero__cta:focus-visible,
+.consulting__cta:focus-visible {
+  outline: 2px solid var(--clr-primary);
+  outline-offset: 3px;
+}
+.hero__cta-text {
+  position: relative;
+}

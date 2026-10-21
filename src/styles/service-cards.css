@@ -1,0 +1,266 @@
+/* services page: sections, grid, service cards (brief/detailed/expanded) and the dimmed overlay */
+/* Ported from scss/main.css. Keep file import order: see src/app/layout.tsx */
+
+.section-title {
+  color: var(--clr-secondary);
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.main-packages {
+  margin-bottom: 4rem;
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+.services-container.primary-services {
+  margin-bottom: 4rem;
+}
+.services-container.secondary-services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.primary-services {
+  justify-content: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.primary-services .service-card {
+  flex: 1 1 300px;
+  max-width: 400px;
+}
+
+.secondary-services {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.secondary-services .service-card {
+  flex: 1 1 300px;
+  max-width: 380px;
+}
+
+.service-card {
+  background: linear-gradient(135deg, var(--clr-dark) 0%, #0a1f25 100%);
+  border-radius: 15px;
+  padding: 2rem;
+  position: relative;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.service-card .brief-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.service-card .detailed-content {
+  display: none;
+}
+.service-card.expanded {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1101;
+  max-width: 800px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: linear-gradient(135deg, var(--clr-dark) 0%, #0a1f25 100%);
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.5);
+  cursor: auto;
+}
+.service-card.expanded .brief-content {
+  display: none;
+}
+.service-card.expanded .detailed-content {
+  display: block;
+  padding: 1rem;
+}
+.service-card h2 {
+  color: var(--clr-secondary);
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+.service-card h3 {
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+}
+.service-card h4 {
+  color: var(--clr-secondary);
+  font-family: var(--font-body);
+  font-size: 1.3rem;
+  margin: 1rem 0;
+}
+.service-card ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+.service-card ul li {
+  color: #fff;
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  font-family: var(--font-body);
+}
+.service-card ul li:before {
+  content: "•";
+  color: var(--clr-secondary);
+  position: absolute;
+  left: 0;
+}
+.service-card .brief-features {
+  flex-grow: 1;
+}
+.service-card .brief-features li {
+  font-size: 1.1rem;
+}
+.service-card .card-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+}
+.service-card .card-actions button {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border: none;
+}
+.service-card .card-actions .view-details {
+  background: transparent;
+  color: var(--clr-secondary);
+  border: 2px solid var(--clr-secondary);
+}
+.service-card .card-actions .view-details:hover {
+  background: rgba(51, 147, 176, 0.1);
+}
+.service-card .card-actions .request-button {
+  background: var(--clr-secondary);
+  color: white;
+}
+.service-card .card-actions .request-button:hover {
+  background: var(--clr-secondary-hover);
+}
+
+.secondary-services .service-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.secondary-services .service-card .brief-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.secondary-services .service-card .brief-content .brief-features {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1100;
+}
+
+/* =====================
+   SERVICES PAGE
+   ===================== */
+.services-container {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  align-items: stretch;
+}
+.services-container.primary-services {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
+  padding: 1rem 0 2rem;
+  max-width: 1400px;
+}
+.services-container.secondary-services {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  padding: 1rem 0;
+  max-width: 1400px;
+}
+.primary-services .service-card,
+.secondary-services .service-card {
+  max-width: none;
+}
+.section-title {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  margin: 1.5rem 0;
+  overflow-wrap: break-word;
+}
+.service-card {
+  border: 1px solid rgba(69, 180, 214, 0.16);
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+.service-card:not(.expanded):hover {
+  transform: translateY(-4px);
+  border-color: rgba(69, 180, 214, 0.5);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+.service-card h2 {
+  font-size: clamp(1.2rem, 1.6vw, 1.5rem);
+  line-height: 1.25;
+}
+.service-card h3 {
+  line-height: 1.4;
+  margin-bottom: 1.25rem;
+}
+.service-card .brief-features li {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+.service-card ul li {
+  color: rgba(255, 255, 255, 0.9);
+}
+.service-card .card-actions {
+  flex-wrap: wrap;
+  padding-top: 0.5rem;
+}
+.service-card .card-actions button {
+  flex: 1 1 120px;
+  min-height: 44px;
+}
+.service-card.expanded {
+  height: auto;
+  padding: 2rem;
+  -webkit-overflow-scrolling: touch;
+}
+.service-card.expanded .detailed-content {
+  padding: 0;
+}
+.service-card.expanded .detailed-content li {
+  line-height: 1.5;
+  font-size: 1rem;
+}
+.service-card.expanded .card-actions {
+  margin-top: 1.5rem;
+}

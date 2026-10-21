@@ -1,0 +1,147 @@
+/* late overrides: 'LOGO LOCKUP + HERO v2' and mobile-menu fix. These intentionally beat the earlier media queries, so this file must be imported LAST */
+/* Ported from scss/main.css. Keep file import order: see src/app/layout.tsx */
+
+/* =====================
+   LOGO LOCKUP + HERO v2 (framed video)
+   ===================== */
+.header__logo {
+  gap: 12px;
+}
+.header__logo-text {
+  gap: 5px;
+  padding-left: 12px;
+  border-left: 1px solid rgba(69, 180, 214, 0.45);
+}
+.header__logo-text p {
+  font-size: 32px;
+}
+.header__logo-tagline {
+  font-size: 13.5px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-transform: none;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.hero {
+  min-height: clamp(520px, 68vh, 640px);
+}
+.hero::after {
+  background:
+    linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0) 22%),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.35) 38%, rgba(0, 0, 0, 0) 60%);
+}
+.hero__content-wrapper {
+  padding: 64px 24px 110px;
+}
+.hero__video {
+  inset: auto;
+  top: 50%;
+  right: max(0px, calc((100% - 1200px) / 2));
+  width: min(900px, 66%);
+  aspect-ratio: 16 / 9;
+  transform: translateY(-50%);
+  overflow: visible;
+  -webkit-mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, #000 45%, transparent 100%);
+  mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, #000 45%, transparent 100%);
+}
+.hero__video video {
+  object-fit: cover;
+  opacity: 0.9;
+}
+
+@media (max-width: 1100px) {
+  .header__logo-tagline {
+    font-size: 11.5px;
+    letter-spacing: 0.04em;
+  }
+  .header__logo-text p {
+    font-size: 28px;
+  }
+  .hero {
+    min-height: clamp(420px, 42vh, 500px);
+  }
+  .hero__content-wrapper {
+    padding-top: 48px;
+    padding-bottom: 136px;
+  }
+  .hero__video {
+    width: 74%;
+    right: 0;
+    -webkit-mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, #000 30%, transparent 92%);
+    mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, #000 30%, transparent 92%);
+  }
+}
+@media (max-width: 768px) {
+  .header__logo {
+    gap: 8px;
+  }
+  .header__logo-text {
+    padding-left: 8px;
+    gap: 3px;
+  }
+  .header__logo-text p {
+    font-size: 22px;
+  }
+  .header__logo-tagline {
+    display: block;
+    font-size: 10.5px;
+    line-height: 1.25;
+    letter-spacing: 0.02em;
+    white-space: normal;
+    max-width: 150px;
+  }
+  .hero {
+    min-height: 0;
+  }
+  .hero::after {
+    background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0) 22%);
+  }
+  .hero__video {
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    transform: none;
+    opacity: 0.6;
+    -webkit-mask-image: radial-gradient(ellipse 55% 55% at 50% 50%, #000 35%, transparent 85%);
+    mask-image: radial-gradient(ellipse 55% 55% at 50% 50%, #000 35%, transparent 85%);
+  }
+  .hero__video video {
+    opacity: 1;
+  }
+  .hero__content-wrapper {
+    padding: 56px 24px 96px;
+  }
+}
+@media (max-width: 350px) {
+  .header__logo-tagline {
+    display: none;
+  }
+  .header__logo-text {
+    border-left: 0;
+    padding-left: 0;
+  }
+}
+@media (max-width: 768px) {
+  .modal-content .close {
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Mobile menu: the header's backdrop-filter stops the dropdown from painting its
+   background in Chromium, so content showed through. Use solid black instead. */
+@media (max-width: 768px) {
+  .header {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    background: #000;
+  }
+  .header__navigation {
+    background: #000;
+  }
+}

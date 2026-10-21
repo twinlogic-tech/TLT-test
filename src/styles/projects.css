@@ -1,0 +1,77 @@
+/* projects */
+/* Ported from scss/main.css (line ranges noted). Keep file import order: see src/app/layout.tsx */
+
+/* =====================
+   PROJECTS
+   ===================== */
+.projects__intro {
+  max-width: 640px;
+  margin: 0 auto 36px;
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--clr-text);
+}
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  text-align: left;
+}
+.project-card {
+  display: flex;
+  flex-direction: column;
+  padding: 28px 24px 24px;
+  border-radius: 18px;
+  border: 1px solid rgba(93, 85, 85, 0.7);
+  background: linear-gradient(160deg, rgba(22, 62, 74, 0.35), rgba(0, 0, 0, 0.4));
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--clr-primary);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.55), 0 0 24px rgba(69, 180, 214, 0.15);
+}
+.project-card__type {
+  margin-bottom: 10px;
+  font-family: var(--font-body);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--clr-secondary);
+}
+.project-card__title {
+  margin-bottom: 12px;
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 1.25;
+  color: var(--clr-primary);
+}
+.project-card__desc {
+  margin-bottom: 20px;
+  font-family: var(--font-body);
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: var(--clr-text);
+}
+.project-card__tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+}
+.project-card__tags li,
+.consulting__areas li {
+  font-family: var(--font-body);
+  border-radius: 999px;
+}
+.project-card__tags li {
+  padding: 5px 12px;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--clr-primary);
+  background: rgba(69, 180, 214, 0.1);
+  border: 1px solid rgba(69, 180, 214, 0.3);
+}

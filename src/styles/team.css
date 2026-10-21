@@ -1,0 +1,11 @@
+/* team: round photos and reversed card (cards themselves are .about-card-1 in sections.css) */
+/* Ported from scss/main.css (line ranges noted). Keep file import order: see src/app/layout.tsx */
+
+.team .about-card-1__logo {
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.about-card-1--reversed {
+  flex-direction: row-reverse;
+}

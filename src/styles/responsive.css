@@ -1,0 +1,426 @@
+/* responsive: tablet/mobile breakpoints, reduced motion, touch-target fixes (must stay AFTER the section files) */
+/* Ported from scss/main.css. Keep file import order: see src/app/layout.tsx */
+
+/* =====================
+   TABLET
+   ===================== */
+@media (max-width: 1100px) {
+  .header__logo-tagline {
+    font-size: 9px;
+  }
+  .header__navigation ul {
+    gap: 8px;
+  }
+  .services-container.primary-services,
+  .services-container.secondary-services {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .projects__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .product-card {
+    gap: 32px;
+    padding: 36px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1100px) {
+  .hero {
+    min-height: clamp(480px, 52vh, 600px);
+  }
+  .hero__content-wrapper {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  .services {
+    gap: 20px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .services__card {
+    padding: 28px 18px;
+  }
+  .services__card-title {
+    font-size: 1.15rem;
+  }
+  .services__card-description {
+    font-size: 0.95rem;
+  }
+  .about-card-1 {
+    padding: 32px;
+    gap: 28px;
+  }
+  .about-card-1__logo {
+    width: 160px;
+  }
+  .team .about-card-1__logo {
+    height: 160px;
+  }
+  .contact-section__content {
+    gap: 24px;
+  }
+  .contact-section-text,
+  .contact-form {
+    padding: 28px;
+  }
+  .storgatan-54-67-container {
+    width: auto;
+  }
+}
+
+/* =====================
+   MOBILE RESPONSIVE
+   ===================== */
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 72px;
+  }
+  main {
+    padding: 1rem;
+  }
+  .header {
+    padding: 8px 16px;
+  }
+  .header__navbar {
+    padding: 4px 0;
+    position: relative;
+    gap: 8px;
+  }
+  .header__logo img {
+    width: 40px;
+  }
+  .header__logo-text p {
+    font-size: 24px;
+  }
+  .header__logo-tagline {
+    font-size: 8.5px;
+    letter-spacing: 0.08em;
+  }
+  .hamburger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    margin-right: -8px;
+  }
+  .header__navigation {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -16px;
+    right: -16px;
+    background: rgba(0, 0, 0, 0.97);
+    padding: 8px 0 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .header__navigation.open {
+    display: block;
+  }
+  .header__navigation ul {
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+  }
+  .header__navigation li {
+    padding: 0;
+    font-size: 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+  .header__navigation li a {
+    display: block;
+    padding: 14px 24px;
+    min-height: 44px;
+  }
+  .header__navigation li:hover {
+    transform: none;
+  }
+  .header__navigation li:hover::after,
+  .header__navigation li.active::after {
+    display: none;
+  }
+  .lang-switcher {
+    margin-left: auto;
+    margin-right: 4px;
+  }
+  .lang-btn {
+    min-width: 44px;
+    min-height: 44px;
+    font-size: 13px;
+  }
+
+  /* Hero */
+  .hero {
+    min-height: 0;
+  }
+  .hero::after {
+    background:
+      linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0) 25%),
+      linear-gradient(180deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.7));
+  }
+  .hero__content-wrapper {
+    padding: 72px 24px 112px;
+    gap: 20px;
+  }
+  .hero__video video {
+    opacity: 0.55;
+  }
+  .hero__cta {
+    min-height: 48px;
+    font-size: 1.1rem;
+    padding: 10px 28px;
+  }
+
+  /* Services (home) */
+  .services {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 480px;
+    gap: 20px;
+    margin-top: -64px;
+    padding: 0 16px 24px;
+  }
+
+  /* Sections */
+  .about,
+  .team,
+  .products,
+  .projects,
+  .consulting {
+    padding: 28px 16px;
+  }
+  .what-we-do-container {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+  .about-card-1 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 24px 20px;
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+  .about-card-1__text {
+    flex: none;
+    max-width: 100%;
+    width: 100%;
+    text-align: left;
+  }
+  .about-card-1--reversed {
+    flex-direction: column;
+  }
+  .about-card-1__logo {
+    width: 140px;
+  }
+  .team .about-card-1__logo {
+    height: 140px;
+  }
+
+  .product-card {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+    padding: 28px 20px;
+    border-radius: 20px;
+  }
+  .projects__grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+  .project-card {
+    padding: 22px 20px;
+  }
+  .consulting__card {
+    padding: 36px 20px;
+    gap: 22px;
+    border-radius: 20px;
+  }
+  .consulting__text {
+    font-size: 1.02rem;
+  }
+  .consulting__cta {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  /* Services page */
+  .services-container,
+  .services-container.primary-services,
+  .services-container.secondary-services {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 0.5rem 0;
+    gap: 1.25rem;
+  }
+  .services-container.primary-services {
+    margin-bottom: 2rem;
+  }
+  .main-packages {
+    margin-bottom: 2rem;
+  }
+  .service-card {
+    padding: 1.5rem 1.25rem;
+    width: 100%;
+    max-width: none;
+  }
+  .service-card.expanded {
+    width: calc(100% - 24px);
+    max-height: 88vh;
+    padding: 1.5rem 1.25rem;
+  }
+  .modal-content {
+    width: calc(100% - 32px);
+    margin: 6vh auto;
+    padding: 24px 18px;
+  }
+
+  /* Contact */
+  .contact-section {
+    min-height: 0;
+  }
+  .contact-section .contact-title-container {
+    font-size: 1.6rem;
+    padding: 28px 16px 0;
+    margin-bottom: 24px;
+  }
+  .contact-section__content {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .contact-section-text,
+  .contact-form {
+    max-width: 100%;
+    padding: 24px 20px;
+  }
+  .storgatan-54-67-container {
+    width: auto;
+  }
+  .infotwinlogic-techse {
+    overflow-wrap: anywhere;
+  }
+  .tinted-logo-icon {
+    width: 120px;
+    height: 120px;
+  }
+  .contact-form-child,
+  .contact-form-item {
+    min-height: 44px;
+  }
+  .lets-go-wrapper {
+    width: 100%;
+    height: 48px;
+    align-self: stretch;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 32px 16px 88px;
+  }
+  .copyright {
+    max-width: 320px;
+    white-space: normal;
+    height: auto;
+    line-height: 1.5;
+    padding-left: 24px;
+    text-align: left;
+  }
+  .twin-logic-tech {
+    position: static;
+    white-space: normal;
+  }
+  .floating-button {
+    right: 16px;
+    bottom: 16px;
+  }
+}
+
+@media (max-width: 420px) {
+  .header__logo img {
+    width: 34px;
+  }
+  .header__logo-text p {
+    font-size: 22px;
+  }
+  .header__logo-tagline {
+    font-size: 7.5px;
+    letter-spacing: 0.04em;
+  }
+}
+@media (max-width: 360px) {
+  .header {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .header__logo-tagline {
+    display: none;
+  }
+  .hero__content-wrapper {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .what-we-do-container {
+    font-size: 1.4rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+/* QA fixes: touch targets */
+@media (max-width: 1100px) {
+  .hamburger {
+    flex-shrink: 0;
+  }
+  .socialmedia-links {
+    max-width: 176px;
+    height: 44px;
+  }
+  .social-icons,
+  .social-icons1,
+  .social-icons2,
+  .social-icons3 {
+    width: 44px;
+    height: 44px;
+  }
+  .social-icons1 {
+    left: 44px;
+  }
+  .social-icons2 {
+    left: 88px;
+  }
+  .social-icons3 {
+    left: 132px;
+  }
+  .social-icons .vector-icon,
+  .social-icons1 .vector-icon,
+  .social-icons2 .vector-icon,
+  .social-icons3 .vector-icon {
+    top: 7px;
+    left: 7px;
+  }
+  .infotwinlogic-techse {
+    display: inline-block;
+    padding: 13px 0;
+  }
+}
+@media (min-width: 769px) and (max-width: 1100px) {
+  .header__nav-item {
+    display: inline-block;
+    padding: 15px 0;
+  }
+  .lang-btn {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1100px) {
+  .lets-go-wrapper {
+    min-height: 44px;
+  }
+}
